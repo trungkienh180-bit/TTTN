@@ -1,0 +1,146 @@
+---
+const quotes = [
+  {
+    text: "Tài năng không là gì cả. Bạn có thể có tài năng đến đâu đi nữa, nhưng nếu không làm việc chăm chỉ và không thông minh, nó sẽ chẳng là gì cả.",
+    author: "Cristiano Ronaldo",
+    role: "Cầu thủ bóng đá",
+    initial: "CR"
+  },
+  {
+    text: "Tôi chưa bao giờ thấy ai làm việc chăm chỉ hơn Ronaldo trên sân tập. Anh ấy đến sớm nhất và ra về muộn nhất.",
+    author: "Sir Alex Ferguson",
+    role: "HLV huyền thoại Man Utd",
+    initial: "AF"
+  },
+  {
+    text: "Ronaldo là cầu thủ hoàn hảo nhất tôi từng thấy. Mạnh mẽ, nhanh nhẹn, kỹ thuật tốt và trên hết là ý chí chiến đấu không bao giờ tắt.",
+    author: "Zinedine Zidane",
+    role: "Cựu HLV Real Madrid & huyền thoại bóng đá",
+    initial: "ZZ"
+  },
+  {
+    text: "Nếu bạn không tin vào bản thân mình, không ai tin bạn cả. Tôi luôn tin rằng tôi là cầu thủ xuất sắc nhất thế giới.",
+    author: "Cristiano Ronaldo",
+    role: "Cầu thủ bóng đá",
+    initial: "CR"
+  },
+  {
+    text: "Ronaldo là người đã thay đổi tiêu chuẩn của bóng đá hiện đại. Anh ấy chứng minh rằng thể chất và kỹ thuật có thể song hành hoàn hảo.",
+    author: "Pep Guardiola",
+    role: "HLV Man City",
+    initial: "PG"
+  },
+];
+---
+
+<section id="quotes" class="py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+  <!-- Decorative blobs -->
+  <div class="absolute -right-20 top-10 w-72 h-72 rounded-full bg-red-600/5 blur-[100px] pointer-events-none"></div>
+  <div class="absolute -left-20 bottom-10 w-72 h-72 rounded-full bg-gold-700/5 blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-4 relative z-10">
+    <!-- Section Title -->
+    <div class="text-center max-w-xl mx-auto mb-16">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-700 font-sans block mb-3">DI SẢN & NGÔN TỪ</span>
+      <h2 class="text-3xl md:text-5xl font-display font-black text-white mb-4">
+        Những Câu Nói <span class="text-gradient-gold">Bất Hủ</span>
+      </h2>
+      <p class="text-gray-400 text-sm font-sans font-light">
+        Trí tuệ và tinh thần của một huyền thoại qua chính lời nói của họ và những người đã tận mắt chứng kiến sự vĩ đại.
+      </p>
+    </div>
+
+    <!-- Quotes Slider Container -->
+    <div class="relative overflow-hidden">
+      <div id="quotes-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+        {quotes.map((q) => (
+          <div class="min-w-[320px] md:min-w-[500px] glass-panel border border-white/5 rounded-2xl p-8 flex flex-col gap-6 glow-gold-hover transition-all duration-300">
+            <!-- Quote Mark -->
+            <span class="text-6xl font-display text-gold-700/30 leading-none -mb-4 select-none">&ldquo;</span>
+            
+            <!-- Quote Text -->
+            <blockquote class="text-gray-300 text-base md:text-lg font-sans font-light leading-relaxed italic">
+              {q.text}
+            </blockquote>
+
+            <!-- Author -->
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-700 to-gold-950 flex items-center justify-center text-xs font-display font-bold text-black shrink-0">
+                {q.initial}
+              </div>
+              <div>
+                <p class="text-white font-semibold text-sm font-sans">{q.author}</p>
+                <p class="text-gray-500 text-xs font-sans">{q.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="flex items-center justify-center gap-4 mt-10">
+      <button id="prev-quote" class="w-12 h-12 rounded-full glass-panel border border-white/10 flex items-center justify-center text-white hover:border-gold-700 hover:text-gold-700 transition-all duration-300 group" aria-label="Previous">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <!-- Dots -->
+      <div id="quote-dots" class="flex gap-2">
+        {quotes.map((_, i) => (
+          <button class={`quote-dot w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-gold-700' : 'bg-white/20'}`} data-index={i} aria-label={`Quote ${i + 1}`}></button>
+        ))}
+      </div>
+
+      <button id="next-quote" class="w-12 h-12 rounded-full glass-panel border border-white/10 flex items-center justify-center text-white hover:border-gold-700 hover:text-gold-700 transition-all duration-300 group" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('quotes-track') as HTMLElement;
+  const dots = document.querySelectorAll<HTMLElement>('.quote-dot');
+  const prevBtn = document.getElementById('prev-quote');
+  const nextBtn = document.getElementById('next-quote');
+  
+  let current = 0;
+  const total = dots.length;
+
+  function getSlideWidth(): number {
+    const card = track?.firstElementChild as HTMLElement;
+    if (!card) return 0;
+    const style = window.getComputedStyle(card);
+    return card.offsetWidth + parseInt(style.marginRight || '0') + 24; // 24 = gap-6
+  }
+
+  function goTo(index: number) {
+    current = (index + total) % total;
+    const offset = current * getSlideWidth();
+    track.style.transform = `translateX(-${offset}px)`;
+    dots.forEach((dot, i) => {
+      if (i === current) {
+        dot.classList.add('w-6', 'bg-gold-700');
+        dot.classList.remove('bg-white/20');
+      } else {
+        dot.classList.remove('w-6', 'bg-gold-700');
+        dot.classList.add('bg-white/20');
+      }
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
+  nextBtn?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Auto-advance
+  let autoplay = setInterval(() => goTo(current + 1), 5000);
+  track?.parentElement?.addEventListener('mouseenter', () => clearInterval(autoplay));
+  track?.parentElement?.addEventListener('mouseleave', () => {
+    autoplay = setInterval(() => goTo(current + 1), 5000);
+  });
+</script>

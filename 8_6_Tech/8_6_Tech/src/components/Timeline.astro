@@ -1,0 +1,127 @@
+---
+const eras = [
+  {
+    year: "2001–2003",
+    club: "Sporting CP",
+    flag: "🇵🇹",
+    color: "#00a859",
+    highlight: "Nơi tất cả bắt đầu",
+    goals: "5",
+    desc: "Ký hợp đồng chuyên nghiệp đầu tiên lúc 16 tuổi. Màn trình diễn trước Man Utd khiến cả đội khách xin mua anh ngay sau trận."
+  },
+  {
+    year: "2003–2009",
+    club: "Manchester United",
+    flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    color: "#da291c",
+    highlight: "Trưởng thành thành siêu sao",
+    goals: "118",
+    desc: "Dưới bàn tay dẫn dắt của Sir Alex Ferguson, Ronaldo đoạt 3 Premier League, 1 Champions League và Quả Bóng Vàng FIFA đầu tiên (2008)."
+  },
+  {
+    year: "2009–2018",
+    club: "Real Madrid",
+    flag: "🇪🇸",
+    color: "#febe10",
+    highlight: "Kỷ nguyên hoàng kim",
+    goals: "450",
+    desc: "Kỷ lục chuyển nhượng thế giới 94M£. Phá vỡ mọi kỷ lục La Liga, đoạt 4 Champions League, 4 Quả Bóng Vàng và 4 Chiếc Giày Vàng châu Âu."
+  },
+  {
+    year: "2018–2021",
+    club: "Juventus",
+    flag: "🇮🇹",
+    color: "#000000",
+    highlight: "Chinh phục đất nước hình chiếc ủng",
+    goals: "101",
+    desc: "Dẫn dắt Juventus vô địch Serie A 2 mùa liên tiếp và ghi bàn ở 11 trận liên tiếp ngay mùa đầu tiên — kỷ lục Serie A."
+  },
+  {
+    year: "2021–2022",
+    club: "Manchester United",
+    flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    color: "#da291c",
+    highlight: "Huyền thoại trở về",
+    goals: "24",
+    desc: "Sự trở lại Old Trafford gây chấn động làng bóng đá. Ra mắt thứ 2 ấn tượng với cú đúp vào lưới Newcastle (4–1)."
+  },
+  {
+    year: "2023–Nay",
+    club: "Al Nassr",
+    flag: "🇸🇦",
+    color: "#f5a623",
+    highlight: "Chương mới đầy tham vọng",
+    goals: "100+",
+    desc: "Mang tham vọng bóng đá đến Saudi Arabia. Tiếp tục phá kỷ lục và chứng minh rằng đam mê không bao giờ tắt dù ở tuổi nào."
+  },
+  {
+    year: "2003–Nay",
+    club: "Bồ Đào Nha ĐTQG",
+    flag: "🇵🇹",
+    color: "#d4af37",
+    highlight: "Biểu tượng dân tộc",
+    goals: "130+",
+    desc: "Dẫn dắt Bồ Đào Nha vô địch EURO 2016 và Nations League 2019. Cầu thủ ra sân nhiều nhất (200+) và ghi bàn nhiều nhất lịch sử các ĐTQG thế giới."
+  },
+];
+---
+
+<section id="timeline" class="py-24 bg-[#0a0a0a] border-t border-white/5 relative overflow-hidden">
+  <!-- Background glow -->
+  <div class="absolute left-1/2 top-0 w-[600px] h-[600px] -translate-x-1/2 bg-gold-700/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-4 relative z-10">
+    <!-- Section Title -->
+    <div class="text-center max-w-xl mx-auto mb-20">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-700 font-sans block mb-3">SỰ NGHIỆP HUYỀN THOẠI</span>
+      <h2 class="text-3xl md:text-5xl font-display font-black text-white mb-4">
+        Hành Trình <span class="text-gradient-gold">Chinh Phục</span>
+      </h2>
+      <p class="text-gray-400 text-sm font-sans font-light">
+        Mỗi bến đỗ là một chương sử thi — mỗi mùa giải là một kỷ lục bị xô đổ.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical line -->
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold-700/40 via-gold-700/10 to-transparent transform md:-translate-x-1/2"></div>
+
+      <div class="space-y-10">
+        {eras.map((era, i) => (
+          <div class={`relative flex items-start gap-6 md:gap-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} group`}>
+            
+            <!-- Dot on timeline -->
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 rounded-full border-2 border-gold-700 bg-black -translate-x-1/2 mt-5 z-10 group-hover:scale-150 group-hover:bg-gold-700 transition-all duration-300 shadow-md shadow-gold-700/30"></div>
+
+            <!-- Spacer for opposite side -->
+            <div class="hidden md:block md:w-1/2"></div>
+
+            <!-- Card -->
+            <div class={`ml-10 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
+              <div class="glass-panel border border-white/5 rounded-2xl p-5 glow-gold-hover transition-all duration-300 group-hover:border-gold-700/20">
+                <!-- Club & Year -->
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xl">{era.flag}</span>
+                    <h3 class="text-base font-display font-bold text-white">{era.club}</h3>
+                  </div>
+                  <span class="text-xs font-mono text-gray-500 bg-white/5 px-2 py-1 rounded-md">{era.year}</span>
+                </div>
+
+                <!-- Highlight & goals -->
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-[11px] font-semibold text-gold-700 uppercase tracking-wider font-sans">{era.highlight}</span>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-gold-950/50 border border-gold-700/20 text-gold-500 font-mono">{era.goals} ⚽</span>
+                </div>
+
+                <!-- Description -->
+                <p class="text-xs text-gray-400 leading-relaxed font-sans font-light">{era.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

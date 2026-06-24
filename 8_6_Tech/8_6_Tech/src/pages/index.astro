@@ -1,0 +1,457 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristiano Ronaldo - CR7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #f0f0f0;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 2px;
+    }
+
+    header h1 span {
+      color: #d4af37;
+    }
+
+    header p {
+      margin-top: 6px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* ===== MAIN WRAPPER ===== */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ===== PROFILE SECTION ===== */
+    .profile {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .profile img {
+      width: 240px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #2a2a2a;
+      flex-shrink: 0;
+    }
+
+    .profile-info h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .profile-info .subtitle {
+      color: #d4af37;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .profile-info table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.88rem;
+    }
+
+    .profile-info td {
+      padding: 7px 0;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .profile-info td:first-child {
+      color: #888;
+      width: 140px;
+    }
+
+    .profile-info td:last-child {
+      color: #eee;
+      font-weight: 500;
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    /* ===== STATS GRID ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    .stat-card {
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .stat-card .label {
+      font-size: 0.72rem;
+      color: #666;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== CLUBS TABLE ===== */
+    .clubs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-bottom: 50px;
+    }
+
+    .clubs-table thead tr {
+      background: #161616;
+    }
+
+    .clubs-table th {
+      padding: 12px 14px;
+      text-align: left;
+      color: #888;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      border-bottom: 1px solid #222;
+    }
+
+    .clubs-table th:not(:first-child) {
+      text-align: center;
+    }
+
+    .clubs-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #1a1a1a;
+      color: #ccc;
+    }
+
+    .clubs-table td:not(:first-child) {
+      text-align: center;
+    }
+
+    .clubs-table tr:hover td {
+      background: #161616;
+    }
+
+    .club-name {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .club-flag {
+      margin-right: 6px;
+    }
+
+    .highlight {
+      color: #d4af37;
+      font-weight: 700;
+    }
+
+    /* ===== TROPHIES ===== */
+    .trophies-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+
+    .trophy-item {
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+
+    .trophy-item .trophy-name {
+      color: #ddd;
+    }
+
+    .trophy-item .trophy-count {
+      font-weight: 700;
+      color: #d4af37;
+      font-size: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #1a1a1a;
+      color: #444;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>CRISTIANO <span>RONALDO</span></h1>
+    <p>CR7 · Cầu thủ bóng đá chuyên nghiệp người Bồ Đào Nha</p>
+  </header>
+
+  <!-- BANNER ẢNH CR7 -->
+  <div style="width:100%; max-height:420px; overflow:hidden; position:relative;">
+    <img
+      src="/cr7-banner.jpg"
+      alt="Cristiano Ronaldo"
+      style="width:100%; height:420px; object-fit:cover; object-position:center top; display:block; filter: brightness(0.8);"
+    />
+    <!-- Overlay text on banner -->
+    <div style="position:absolute; bottom:0; left:0; right:0; padding:30px 40px;
+      background: linear-gradient(to top, rgba(15,15,15,1) 0%, rgba(15,15,15,0.6) 60%, transparent 100%);">
+      <p style="color:#d4af37; font-size:0.75rem; text-transform:uppercase; letter-spacing:3px; font-weight:600; margin-bottom:6px;">
+        Huyền thoại bóng đá thế giới
+      </p>
+      <h2 style="color:#fff; font-size:2rem; font-weight:700; letter-spacing:1px;">
+        CRISTIANO <span style="color:#d4af37;">RONALDO</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile">
+      <img
+        src="/cr7.jpg"
+        alt="Cristiano Ronaldo"
+      />
+      <div class="profile-info">
+        <h2>Cristiano Ronaldo dos Santos Aveiro</h2>
+        <p class="subtitle">CR7 · Tiền đạo · Đội trưởng ĐTQG Bồ Đào Nha</p>
+        <table>
+          <tr><td>Ngày sinh</td><td>5 tháng 2, 1985</td></tr>
+          <tr><td>Nơi sinh</td><td>Funchal, Madeira, Bồ Đào Nha</td></tr>
+          <tr><td>Chiều cao</td><td>1,87 m</td></tr>
+          <tr><td>Vị trí</td><td>Tiền đạo</td></tr>
+          <tr><td>Chân thuận</td><td>Phải</td></tr>
+          <tr><td>Số áo</td><td>7</td></tr>
+          <tr><td>Câu lạc bộ hiện tại</td><td>Al Nassr (Saudi Arabia)</td></tr>
+          <tr><td>Đội tuyển quốc gia</td><td>Bồ Đào Nha (2003 – nay)</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- THỐNG KÊ TỔNG -->
+    <h2 class="section-title">Thống kê sự nghiệp</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="number">900+</div>
+        <div class="label">Bàn thắng sự nghiệp</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">250+</div>
+        <div class="label">Kiến tạo</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">1200+</div>
+        <div class="label">Trận thi đấu</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5</div>
+        <div class="label">Quả Bóng Vàng</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5</div>
+        <div class="label">Champions League</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">4</div>
+        <div class="label">Chiếc Giày Vàng</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">130+</div>
+        <div class="label">Bàn thắng ĐTQG</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">200+</div>
+        <div class="label">Trận ĐTQG</div>
+      </div>
+    </div>
+
+    <!-- CÁC ĐỘI ĐÃ THAM GIA -->
+    <h2 class="section-title">Các đội đã tham gia</h2>
+    <table class="clubs-table">
+      <thead>
+        <tr>
+          <th>Câu lạc bộ</th>
+          <th>Giai đoạn</th>
+          <th>Trận</th>
+          <th>Bàn thắng</th>
+          <th>Kiến tạo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="club-flag">🇵🇹</span><span class="club-name">Sporting CP</span></td>
+          <td>2002 – 2003</td>
+          <td>31</td>
+          <td class="highlight">5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="club-name">Manchester United</span></td>
+          <td>2003 – 2009</td>
+          <td>292</td>
+          <td class="highlight">118</td>
+          <td>69</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🇪🇸</span><span class="club-name">Real Madrid</span></td>
+          <td>2009 – 2018</td>
+          <td>438</td>
+          <td class="highlight">450</td>
+          <td>131</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🇮🇹</span><span class="club-name">Juventus</span></td>
+          <td>2018 – 2021</td>
+          <td>134</td>
+          <td class="highlight">101</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="club-name">Manchester United</span></td>
+          <td>2021 – 2022</td>
+          <td>54</td>
+          <td class="highlight">27</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🇸🇦</span><span class="club-name">Al Nassr</span></td>
+          <td>2023 – nay</td>
+          <td>80+</td>
+          <td class="highlight">74+</td>
+          <td>18+</td>
+        </tr>
+        <tr>
+          <td><span class="club-flag">🇵🇹</span><span class="club-name">Bồ Đào Nha ĐTQG</span></td>
+          <td>2003 – nay</td>
+          <td>209+</td>
+          <td class="highlight">130+</td>
+          <td>43+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- DANH HIỆU -->
+    <h2 class="section-title">Danh hiệu đạt được</h2>
+    <div class="trophies-list">
+      <div class="trophy-item">
+        <span class="trophy-name">🏆 UEFA Champions League</span>
+        <span class="trophy-count">×5</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🥇 Premier League</span>
+        <span class="trophy-count">×3</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🥇 La Liga</span>
+        <span class="trophy-count">×2</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🥇 Serie A</span>
+        <span class="trophy-count">×2</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🏅 FA Cup</span>
+        <span class="trophy-count">×1</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🏅 Copa del Rey</span>
+        <span class="trophy-count">×2</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🌍 FIFA Club World Cup</span>
+        <span class="trophy-count">×4</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🌍 UEFA Super Cup</span>
+        <span class="trophy-count">×3</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🌟 UEFA EURO</span>
+        <span class="trophy-count">×1 (2016)</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">🌟 UEFA Nations League</span>
+        <span class="trophy-count">×1 (2019)</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">⭐ Quả Bóng Vàng FIFA</span>
+        <span class="trophy-count">×5</span>
+      </div>
+      <div class="trophy-item">
+        <span class="trophy-name">👟 Chiếc Giày Vàng châu Âu</span>
+        <span class="trophy-count">×4</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Dữ liệu mang tính tham khảo · Cập nhật đến 2025 · 8_6_Tech
+  </footer>
+
+</body>
+</html>
