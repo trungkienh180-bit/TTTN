@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temp-app</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        var errDiv = document.createElement('div');
+        errDiv.style.position = 'fixed'; errDiv.style.top = '0'; errDiv.style.left = '0';
+        errDiv.style.background = 'red'; errDiv.style.color = 'white'; errDiv.style.zIndex = '9999';
+        errDiv.style.padding = '20px'; errDiv.style.width = '100%'; errDiv.style.whiteSpace = 'pre-wrap';
+        errDiv.innerHTML = '<h2>Lỗi Code (Chụp màn hình gửi AI nha anh):</h2>' + e.message + '<br/><br/>' + (e.error ? e.error.stack : '');
+        document.body.appendChild(errDiv);
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,2501 @@
+[
+  {
+    "title": "Trang mới(VN)",
+    "slug": "/trang-moi",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-63a72e2a-80bb-4ffd-9ba4-023c3a3108cd",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Hero",
+          "props": {
+            "backgroundColor": "#1A6B49",
+            "badge": "CÔNG NGHỆ TƯƠNG LAI",
+            "titlePart1": "Cung cấp thiết bị CNTT",
+            "titlePart2": "HEXAGON",
+            "titleHighlight": "Solutions",
+            "subtitle": "HEXAGON kiến tạo các giải pháp chuyển đổi số toàn diện, từ phần mềm đến cung cấp các giải pháp internet, thiết bị công nghệ thông tin, giúp doanh nghiệp bứt phá trong kỷ nguyên số.",
+            "rightImage": "https://metik.vn/wp-content/uploads/2026/06/globalmyc.webp",
+            "buttons": [
+              {
+                "text": "Khám phá Dịch vụ",
+                "url": "#",
+                "style": "primary"
+              },
+              {
+                "text": "Liên hệ Tư vấn",
+                "url": "#",
+                "style": "outline"
+              }
+            ],
+            "id": "Hero-425dfb54-463b-4f51-9041-ff58b0389e0b",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "About",
+          "props": {
+            "title": "Về Hexagon",
+            "description": "Hexagon Corporation – Công nghệ tiên phong, nơi chúng tôi không ngừng kiến tạo và đổi mới để mang đến những giá trị vượt trội trong kỷ nguyên số. Với tầm nhìn đa chiều và khát vọng vươn tầm, Hexagon tự hào là đối tác tin cậy, đồng hành cùng bạn trên hành trình chinh phục những đỉnh cao công nghệ.",
+            "imageSrc": "/src/VPX16.jpg",
+            "quoteText": "Làm ngày, làm đêm, làm thêm ngày nghỉ ^_^",
+            "quoteAuthor": "HEXAGON CULTURE",
+            "cards": [
+              {
+                "title": "Sứ mệnh",
+                "content": "Kiến tạo tương lai số bằng các giải pháp tiên tiến."
+              },
+              {
+                "title": "Tầm nhìn",
+                "content": "Trở thành biểu tượng về hệ sinh thái công nghệ đổi mới."
+              },
+              {
+                "title": "Giá trị cốt lõi",
+                "content": "Đổi mới - Đồng hành - Tiên phong - Minh bạch."
+              },
+              {
+                "title": "Nền tảng",
+                "content": "Hệ sinh thái đa ngành, vững chắc và linh hoạt."
+              }
+            ],
+            "id": "About-c7be1f30-6671-44db-93d6-75b605106cb2",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Services",
+          "props": {
+            "lang": "all",
+            "title": "Lĩnh vực hoạt động",
+            "subtitle": "Tại Hexagon, chúng tôi tập trung phát triển hệ sinh thái công nghệ toàn diện, bao gồm:",
+            "cards": [
+              {
+                "title": "Giải pháp công nghệ",
+                "description": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt mọi nhu cầu đặc thù.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/giaiphap-congnghe(vn)"
+              },
+              {
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-4-1782723514901-308215051.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/giaiphapthicong-lapdat(vn)"
+              },
+              {
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Cung cấp giải pháp trí tuệ nhân tạo và phân tích dữ liệu, hỗ trợ ra quyết định thông minh, tự động hóa quy trình và khám phá tiềm năng.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/cungcaothietbiCNTT"
+              },
+              {
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống camera giám sát, mạng wifi chuyên nghiệp, đảm bảo an ninh, ổn định kết nối và phù hợp với mọi nhu cầu.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/dichvucongnghethongtin"
+              }
+            ],
+            "id": "Services-8a32e3f4-e064-40d2-a84f-46daff9279fa"
+          }
+        },
+        {
+          "type": "News",
+          "props": {
+            "title": "Tin tức",
+            "subtitle": "Cập nhật tin tức, sự kiện và thông tin mới nhất từ Hexagon Corporation.",
+            "buttonText": "Xem tất cả bài viết",
+            "buttonUrl": "#",
+            "articles": [
+              {
+                "title": "Không khí tưng bừng tại Chương trình Teambuilding myH25 tại Ngôi nhà Hùng Hậu",
+                "summary": "Cùng nhìn lại những khoảnh khắc đáng nhớ và đẹp nhất của đại gia đình HHC trong chương trình TEAMBUILDING MYH25, diễn ra...",
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-1"
+              },
+              {
+                "title": "Đồng hành cùng sinh viên Đại học Văn Hiến tại Ngày hội sinh viên",
+                "summary": "Công ty Cổ phần Lục Giác hân hạnh được đồng hành cùng các bạn sinh viên khoa Công nghệ Thông tin - Đại học Văn Hiến tron...",
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-2"
+              },
+              {
+                "title": "Sắm tết công nghệ - Nâng cấp thiết bị, khởi đầu bứt phá",
+                "summary": "Năm mới, vận hội mới, thiết bị cũng phải mới! Đầu tư cho công nghệ là đầu tư cho tương lai. Ghé ‘Lục Giác’ để chọn cho m...",
+                "image": "https://beta-api.hexagon.xyz/uploads/sam-tet-cong-nghe-1774343703442-177870451.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-3"
+              },
+              {
+                "title": "Bài viết 4",
+                "summary": "Bài viết 4",
+                "image": "https://beta-api.hexagon.xyz/uploads/phattrienphanmem-1773133089066-706455049.png",
+                "date": "25 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-4"
+              },
+              {
+                "title": "Bài viết 5",
+                "summary": "Bài viết 5",
+                "image": "https://beta-api.hexagon.xyz/uploads/ai-phan-tich-du-lieu-1773291405655-118730188-1774254824600-959205718.jpg",
+                "date": "25 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-5"
+              }
+            ],
+            "id": "News-9868e313-b781-496c-8b40-4e0e132c096d",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Partners",
+          "props": {
+            "title": "Các đối tác liên kết",
+            "partners": [
+              {
+                "name": "Khối B",
+                "logo": "/src/B.png"
+              },
+              {
+                "name": "Khối C",
+                "logo": "/src/Logo Khoi C.png"
+              },
+              {
+                "name": "Khối D",
+                "logo": "/src/Logo Khoi D.png"
+              },
+              {
+                "name": "Happy Food",
+                "logo": "/src/Happy Food.png"
+              },
+              {
+                "name": "Khối E",
+                "logo": "/src/Logo Khoi E.png"
+              },
+              {
+                "name": "Khối F",
+                "logo": "/src/Logo Khoi F.png"
+              }
+            ],
+            "id": "Partners-ff7ae995-9f57-4049-a40c-65211a96187a",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-3d8fa076-5ef9-4e45-944c-cae3fff31215",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "6f82e031-442c-4fa2-bb1f-c80b3719d4d0",
+    "updatedAt": "2026-07-08T14:03:20.929Z"
+  },
+  {
+    "title": "Trang mới (EN)",
+    "slug": "/trang-moien",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới (EN)",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Home",
+                "url": "#"
+              },
+              {
+                "text": "About Us",
+                "url": "#"
+              },
+              {
+                "text": "Services",
+                "url": "#"
+              },
+              {
+                "text": "Support",
+                "url": "#"
+              },
+              {
+                "text": "Contact",
+                "url": "#"
+              }
+            ],
+            "id": "Header-63a72e2a-80bb-4ffd-9ba4-023c3a3108cd",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Hero",
+          "props": {
+            "backgroundColor": "#1A6B49",
+            "badge": "Future Technology",
+            "titlePart1": "Technology Solutions\nIT Equipment Supply\nConstruction & Installation Solutions\nIT Services\n",
+            "titlePart2": "HEXAGON",
+            "titleHighlight": "Solutions",
+            "subtitle": "HEXAGON creates comprehensive digital transformation solutions, from software to internet solutions and IT equipment, helping businesses thrive in the digital age.",
+            "rightImage": "https://metik.vn/wp-content/uploads/2026/06/globalmyc.webp",
+            "buttons": [
+              {
+                "text": "Explore Services ",
+                "url": "#",
+                "style": "primary"
+              },
+              {
+                "text": "Contact for Consulting ",
+                "url": "#",
+                "style": "outline"
+              }
+            ],
+            "id": "Hero-425dfb54-463b-4f51-9041-ff58b0389e0b",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "About",
+          "props": {
+            "title": "About Hexagon",
+            "description": "Hexagon Corporation – Pioneering technology, where we constantly create and innovate to bring superior values in the digital era. With multidimensional vision and ambition to advance, Hexagon is proud to be a trusted partner, accompanying you on the journey to conquer technological heights.",
+            "imageSrc": "/src/VPX16.jpg",
+            "quoteText": "Làm ngày, làm đêm, làm thêm ngày nghỉ ^_^",
+            "quoteAuthor": "HEXAGON CULTURE",
+            "cards": [
+              {
+                "title": "Mission",
+                "content": "Building the digital future with advanced solutions."
+              },
+              {
+                "title": "Vision",
+                "content": "To become a symbol of an innovative technology ecosystem."
+              },
+              {
+                "title": "Core Values",
+                "content": "Innovation - Partnership - Pioneer - Transparency."
+              },
+              {
+                "title": "Foundation",
+                "content": "A multi-sector ecosystem, robust and flexible."
+              }
+            ],
+            "id": "About-c7be1f30-6671-44db-93d6-75b605106cb2",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Services",
+          "props": {
+            "lang": "en",
+            "title": "Our Services",
+            "subtitle": "At Hexagon, we focus on building a comprehensive technology ecosystem, including:",
+            "cards": [
+              {
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/giaiphap-congngheen"
+              },
+              {
+                "title": "Construction & Installation Solutions",
+                "description": "Comprehensive digital transformation strategy consulting, helping businesses optimize processes, enhance customer experience, and achieve sustainable growth.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-4-1782723514901-308215051.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/giaiphapthicong-lapdaten"
+              },
+              {
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/cungcaothietbiCNTTen"
+              },
+              {
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "linkText": "Xem chi tiết",
+                "linkUrl": "http://localhost:5173/dichvucongnghethongtinen"
+              }
+            ],
+            "id": "Services-2783dfe0-b5d7-46df-b135-6c0dbb940233"
+          }
+        },
+        {
+          "type": "News",
+          "props": {
+            "title": "News",
+            "subtitle": "Latest news, events and updates from Hexagon Corporation.",
+            "buttonText": "View all articles",
+            "buttonUrl": "#",
+            "articles": [
+              {
+                "title": "A lively atmosphere at the myH25 Teambuilding Program at Hung Hau House.",
+                "summary": "Let's look back at the most beautiful and memorable moments of the HHC family during the MYH25 TEAMBUILDING, held at the Vinpearl Nha Trang resort.",
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-1en"
+              },
+              {
+                "title": "Accompanying Van Hien Univerity Students at the student festival",
+                "summary": "Hexagon JSC. is honored to accompany the IT students at Van Hien University in the “VHE Startup Devote” competition.\n\n\n\nDuring the event, Hexagon JSC. supported students in developing a business model for electronic technology devices and shared insights on how to present a professional and feasible business plan.",
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-2en"
+              },
+              {
+                "title": "Upgrade your tech - Empower your new year breakthrough",
+                "summary": "New Year, New Success, New Gear! Investing in technology is investing in your future.\n\nVisit ‘Luc Giac’ today to discover the ultimate devices tailored for both high-performance work and premium entertainment\n\nPeak Performance: Smash every goal with cutting-edge power.\nTrendy Design: Sleek, modern, and stylish for the new season.\nUnbeatable Prices: Amazing deals with exclusive Lunar New Year gifts.",
+                "image": "https://beta-api.hexagon.xyz/uploads/sam-tet-cong-nghe-1774343703442-177870451.jpg",
+                "date": "26 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-3en"
+              },
+              {
+                "title": "4",
+                "summary": "4",
+                "image": "https://beta-api.hexagon.xyz/uploads/phattrienphanmem-1773133089066-706455049.png",
+                "date": "25 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-4en"
+              },
+              {
+                "title": "5",
+                "summary": "5",
+                "image": "https://beta-api.hexagon.xyz/uploads/ai-phan-tich-du-lieu-1773291405655-118730188-1774254824600-959205718.jpg",
+                "date": "25 thg 6, 2026",
+                "url": "http://localhost:5173/tintuc-5en"
+              }
+            ],
+            "id": "News-9868e313-b781-496c-8b40-4e0e132c096d",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Partners",
+          "props": {
+            "title": "Các đối tác liên kết",
+            "partners": [
+              {
+                "name": "Khối B",
+                "logo": "/src/B.png"
+              },
+              {
+                "name": "Khối C",
+                "logo": "/src/Logo Khoi C.png"
+              },
+              {
+                "name": "Khối D",
+                "logo": "/src/Logo Khoi D.png"
+              },
+              {
+                "name": "Happy Food",
+                "logo": "/src/Happy Food.png"
+              },
+              {
+                "name": "Khối E",
+                "logo": "/src/Logo Khoi E.png"
+              },
+              {
+                "name": "Khối F",
+                "logo": "/src/Logo Khoi F.png"
+              }
+            ],
+            "id": "Partners-ff7ae995-9f57-4049-a40c-65211a96187a",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-52ee5db9-6928-413b-8661-cd8c13efcb45",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "f0258673-e18b-4dfe-a9ec-92612b810fd9",
+    "updatedAt": "2026-07-08T14:04:33.521Z"
+  },
+  {
+    "title": "Giải pháp công nghệ ",
+    "slug": "/giaiphap-congnghe(vn)",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-78e441cd-0d3b-4001-b68a-bb094034884d",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "ServicePageTemplate",
+          "props": {
+            "breadcrumb": "Trang chủ > Dịch vụ > Giải pháp công nghệ",
+            "heroTitle": "Giải pháp công nghệ",
+            "heroDescription": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt theo nhu cầu và định hướng phát triển dài hạn.",
+            "buttonText": "Liên hệ tư vấn",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+            "solutionsTitle": "Giải pháp nổi bật",
+            "cards": [],
+            "processTitle": "Quy trình thực hiện",
+            "processSubtitle": "Quy trình chuyên nghiệp, minh bạch và hiệu quả.",
+            "steps": [],
+            "ctaTitle": "Sẵn sàng triển khai?",
+            "ctaSubtitle": "Đừng để công nghệ làm rào cản. Hãy biến nó thành lợi thế cạnh tranh của bạn cùng Hexagon.",
+            "primaryButtonText": "Liên hệ ngay",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Về trang chủ",
+            "secondaryButtonUrl": "/",
+            "id": "ServicePageTemplate-e99bfdbe-c411-44d0-966e-f6336957a97e",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-6147edab-af58-40f7-bc22-1da3fc0c7a57",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783410296177h6j1sdc1n54",
+    "updatedAt": "2026-07-08T13:52:31.610Z"
+  },
+  {
+    "title": "Giải pháp thi công và lắp đặt ",
+    "slug": "/giaiphapthicong-lapdat(vn)",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-5883dd72-31e9-4782-aee8-5be4ef7c0f02",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "ConstructionServiceTemplate",
+          "props": {
+            "breadcrumb": "Trang chủ > Dịch vụ > Giải pháp thi công & lắp đặt",
+            "heroTitle": "Giải pháp thi công & lắp đặt",
+            "heroDescription": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững trong môi trường số hóa.",
+            "buttonText": "Liên hệ Tư vấn",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-4-1782723514901-308215051.jpg",
+            "solutionsTitle": "Giải pháp nổi bật",
+            "cards": [
+              {
+                "title": "Đánh giá hiện trạng & mức độ trưởng thành số",
+                "description": "Phân tích toàn diện hệ thống, quy trình và năng lực công nghệ hiện tại, từ đó xác định mức độ sẵn sàng chuyển đổi số của doanh nghiệp."
+              },
+              {
+                "title": "Xây dựng chiến lược chuyển đổi số tổng thể",
+                "description": "Tư vấn lộ trình chuyển đổi số theo từng giai đoạn, phù hợp với mục tiêu kinh doanh, nguồn lực và ngành nghề của doanh nghiệp."
+              },
+              {
+                "title": "Tư vấn lựa chọn công nghệ & giải pháp triển khai",
+                "description": "Đề xuất các nền tảng, công nghệ và mô hình triển khai tối ưu (Cloud, AI, Data, CRM, ERP...), đảm bảo hiệu quả đầu tư và khả năng mở rộng."
+              }
+            ],
+            "processTitle": "Quy trình thực hiện",
+            "processSubtitle": "Quy trình chuyên nghiệp, minh bạch và hiệu quả.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Khảo sát & đánh giá doanh nghiệp"
+              },
+              {
+                "number": "02",
+                "text": "Xác định mục tiêu & định hướng chuyển đổi"
+              },
+              {
+                "number": "03",
+                "text": "Xây dựng lộ trình & giải pháp"
+              },
+              {
+                "number": "04",
+                "text": "Đồng hành triển khai & tối ưu"
+              }
+            ],
+            "ctaTitle": "Sẵn sàng triển khai?",
+            "ctaSubtitle": "Đừng để công nghệ làm rào cản. Hãy biến nó thành lợi thế cạnh tranh của bạn cùng Hexagon.",
+            "primaryButtonText": "Liên hệ ngay",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Về Trang chủ",
+            "secondaryButtonUrl": "/",
+            "id": "ConstructionServiceTemplate-0d16c4fc-aa71-4c32-894c-4a8ec609305f",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-f79af656-d5d7-4cf7-b1de-a6e3a27d2d32",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783411254888mpu5miqoxo",
+    "updatedAt": "2026-07-08T13:53:03.586Z"
+  },
+  {
+    "title": "Cung cấp thiết bị CNTT",
+    "slug": "/cungcaothietbiCNTT",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-c05f286e-de96-46c4-9712-db9e5af1fca9",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "ITEquipmentServiceTemplate",
+          "props": {
+            "breadcrumb": "Trang chủ > Dịch vụ > Cung cấp thiết bị CNTT",
+            "heroTitle": "Cung cấp thiết bị CNTT",
+            "heroDescription": "Cung cấp giải pháp trí tuệ nhân tạo và phân tích dữ liệu, hỗ trợ ra quyết định thông minh, tự động hóa quy trình và khai thác tối đa giá trị từ dữ liệu doanh nghiệp.",
+            "buttonText": "Liên hệ Tư vấn",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+            "solutionsTitle": "Giải pháp nổi bật",
+            "cards": [
+              {
+                "title": "Xây dựng hệ thống dữ liệu tập trung",
+                "description": "Thiết kế và triển khai hệ thống lưu trữ dữ liệu tập trung, giúp doanh nghiệp quản lý, đồng bộ và khai thác dữ liệu hiệu quả."
+              },
+              {
+                "title": "Phân tích dữ liệu & trực quan hóa",
+                "description": "Khai thác dữ liệu thông qua báo cáo, dashboard và mô hình phân tích, hỗ trợ ra quyết định nhanh và chính xác."
+              },
+              {
+                "title": "Ứng dụng AI & Machine Learning",
+                "description": "Triển khai các mô hình AI như dự đoán, phân loại, chatbot, nhận diện hình ảnh... giúp tự động hóa và tối ưu vận hành."
+              }
+            ],
+            "processTitle": "Quy trình thực hiện",
+            "processSubtitle": "Quy trình chuyên nghiệp, minh bạch và hiệu quả.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Thu thập & chuẩn hóa dữ liệu"
+              },
+              {
+                "number": "02",
+                "text": "Thiết kế kiến trúc dữ liệu"
+              },
+              {
+                "number": "03",
+                "text": "Phát triển mô hình & hệ thống"
+              },
+              {
+                "number": "04",
+                "text": "Triển khai & tối ưu liên tục"
+              }
+            ],
+            "ctaTitle": "Sẵn sàng triển khai?",
+            "ctaSubtitle": "Đừng để công nghệ làm rào cản. Hãy biến nó thành lợi thế cạnh tranh của bạn cùng Hexagon.",
+            "primaryButtonText": "Liên hệ ngay",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Về trang chủ",
+            "secondaryButtonUrl": "/",
+            "id": "ITEquipmentServiceTemplate-cd4f8fc0-e5f8-4c80-bcfb-ba4c31f87479",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-2021e164-d119-4600-a9c0-c287d01241b8",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783411717721xtyqzaino0r",
+    "updatedAt": "2026-07-08T13:53:44.409Z"
+  },
+  {
+    "title": "Dịch vụ Công nghệ thông tin ",
+    "slug": "/dichvucongnghethongtin",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-7e3dfe41-228e-4297-bfa4-eb776103fa1d",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "ITServicesTemplate",
+          "props": {
+            "breadcrumb": "Trang chủ > Dịch vụ > Dịch vụ Công nghệ thông tin",
+            "heroTitle": "Dịch vụ Công nghệ thông tin",
+            "heroDescription": "Thi công và lắp đặt hệ thống camera giám sát, mạng wifi chuyên nghiệp, đảm bảo an ninh, ổn định kết nối và phù hợp với mọi quy mô doanh nghiệp.",
+            "buttonText": "Liên hệ tư vấn",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+            "solutionsTitle": "Giải pháp nổi bật",
+            "cards": [
+              {
+                "title": "Giải pháp hệ thống camera giám sát",
+                "description": "Thiết kế và lắp đặt hệ thống camera an ninh cho văn phòng, nhà xưởng, cửa hàng... với khả năng giám sát từ xa, lưu trữ và cảnh báo thông minh."
+              },
+              {
+                "title": "Giải pháp mạng WiFi doanh nghiệp",
+                "description": "Triển khai hệ thống WiFi phủ sóng ổn định, bảo mật cao, đáp ứng số lượng lớn người dùng và thiết bị trong môi trường doanh nghiệp."
+              },
+              {
+                "title": "Giải pháp hạ tầng mạng & tích hợp",
+                "description": "Thi công hệ thống mạng tổng thể (LAN, Switch, Router, Server...), đồng bộ với camera và WiFi để đảm bảo vận hành xuyên suốt."
+              }
+            ],
+            "processTitle": "Quy trình thực hiện",
+            "processSubtitle": "Quy trình chuyên nghiệp, minh bạch và hiệu quả.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Khảo sát & tư vấn giải pháp"
+              },
+              {
+                "number": "02",
+                "text": "Thiết kế sơ đồ & cấu hình hệ thống"
+              },
+              {
+                "number": "03",
+                "text": "Thi công & lắp đặt"
+              },
+              {
+                "number": "04",
+                "text": "Bàn giao & bảo trì"
+              }
+            ],
+            "ctaTitle": "Sẵn sàng triển khai?",
+            "ctaSubtitle": "Đừng để công nghệ làm rào cản. Hãy biến nó thành lợi thế cạnh tranh của bạn cùng Hexagon.",
+            "primaryButtonText": "Liên hệ ngay",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Về trang chủ",
+            "secondaryButtonUrl": "/",
+            "id": "ITServicesTemplate-02149766-9267-4323-8d29-d526f316dc0b",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-4e153e15-b52c-48ec-8ae1-8a574f0e0a24",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783411945578y12om337av8",
+    "updatedAt": "2026-07-08T14:00:10.417Z"
+  },
+  {
+    "title": "Tin tức 1",
+    "slug": "/tintuc-1",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-615940d5-e3f6-42ee-ae90-e1257b1f34b7",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate",
+          "props": {
+            "breadcrumb": "Trang chủ > Bài viết > Hoạt động > Không khí tưng bừng tại Chương trình...",
+            "articleTitle": "Không khí tưng bừng tại Chương trình Teambuilding myH25 tại Ngôi nhà Hùng Hậu",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "02:54",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "Cùng nhìn lại những khoảnh khắc đáng nhớ và đẹp nhất của đại gia đình HHC trong chương trình TEAMBUILDING MYH25, diễn ra tại khu nghỉ dưỡng Vinpearl Nha Trang.",
+            "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+            "content": "Hòa chung không khí rực lửa, đại gia đình HHC đã cùng nhau tham gia các hoạt động tham quan, dã ngoại và tăng cường sự gắn kết tại vùng đảo xinh đẹp của Vinpearl Nha Trang. Tại đây, các thành viên cùng người thân đã được trải nghiệm những giây phút ý nghĩa, ấm áp và tận hưởng những giá trị xứng đáng.\n\nTeambuilding không chỉ là hoạt động để gắn kết tình đồng đội mà còn là dịp để toàn thể các đơn vị, tập thể, và cá nhân cùng nhau nhìn lại và tự hào về những thành tựu đã gặt hái, cũng như những khó khăn, trở ngại mà chúng ta đã cùng nhau vượt qua. Đây chính là bước đà hoàn hảo để chuẩn bị cho một sự khởi đầu trọn vẹn niềm vui, hứa hẹn một hành trình mới với nhiều thắng lợi hơn nữa!\n\nTạm biệt Vinpearl Nha Trang với vô vàn kỷ niệm đẹp, chúng ta hãy cùng nhau mang nguồn năng lượng tích cực này trở lại công việc, tiếp tục đồng lòng, đoàn kết và vững bước tiến lên để chinh phục những mục tiêu lớn hơn.\n\nHHC - Sẵn sàng bứt phá!",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Giải pháp công nghệ",
+                "description": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt theo nhu cầu và định hướng.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững...",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Mang đến đa dạng các thiết bị và phần mềm chất lượng cao, phục vụ từ cá nhân đến doanh nghiệp, đảm bảo tính bền bỉ và công nghệ hiện đại.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống mạng, camera chuyên nghiệp, đảm bảo kết nối ổn định, an toàn và phù hợp với mọi quy mô.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "title": "Đồng hành cùng sinh viên Đại học Văn Hiến tại Ngày hội sinh viên",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate-4dd1680e-780c-4ac9-8cd9-d0722716adf8",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-0fd4d397-c19d-4014-8fcb-7aaea047c7b3",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783412265225mrcew2qnz9d",
+    "updatedAt": "2026-07-08T11:45:16.799Z"
+  },
+  {
+    "title": "Tin tức 2",
+    "slug": "/tintuc-2",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-a8ee1654-a87b-43ba-8b82-ea942379a231"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate2",
+          "props": {
+            "breadcrumb": "Trang chủ › Bài viết › Hoạt động › Đồng hành cùng sinh viên Đại học Văn Hiến tại",
+            "articleTitle": "Đồng hành cùng sinh viên Đại học Văn Hiến tại Ngày hội sinh viên",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "01:25",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "Công ty Cổ phần Lục Giác hân hạnh được đồng hành cùng các bạn sinh viên khoa Công nghệ Thông tin - Đại học Văn Hiến trong chương trình “VHE Startup Devote’’.\nTrong khuôn khổ cuộc thi, Lục Giác đã hỗ trợ các bạn sinh viên xây dựng mô hình kinh doanh thiết bị công nghệ điện tử, đồng thời chia sẻ phương pháp trình bày kế hoạch kinh doanh chuyên nghiệp và khả thi.",
+            "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+            "content": "Với kinh nghiệm thực tế từ doanh nghiệp cùng sự sáng tạo và linh hoạt của các bạn sinh viên, đội myU đã xuất sắc chinh phục ban giám khảo và mang về giải thưởng cao nhất - Giải Nhất Khởi Nghiệp.\n\n\n\nThành công này không chỉ khẳng định sự chuyên nghiệp và tiềm năng của sinh viên Đại học Văn Hiến, mà còn thể hiện tầm nhìn phát triển mạnh mẽ của mô hình kinh doanh đến từ Lục Giác.\n\nLục Giác hy vọng sẽ tiếp tục đồng hành cùng các bạn sinh viên trong hành trình lan tỏa tinh thần khởi nghiệp trong kỷ nguyên số.\n\n\n",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững trong môi trường số hóa.",
+                "linkText": "Liên hệ Tư vấn",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững trong môi trường số hóa.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Cung cấp giải pháp trí tuệ nhân tạo và phân tích dữ liệu, hỗ trợ ra quyết định thông minh, tự động hóa quy trình và khai thác tối đa giá trị từ dữ liệu doanh nghiệp.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống camera giám sát, mạng wifi chuyên nghiệp, đảm bảo an ninh, ổn định kết nối và phù hợp với mọi quy mô doanh nghiệp.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "title": "Không khí tưng bừng tại Chương trình Teambuilding myH25 tại Ngôi nhà Hùng Hậu",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate2-404e9dae-24cc-4470-be5f-1419bbf9c911"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-d32d0ea2-ee65-4978-bbf5-0fa639194aec"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783413523234q609m3v0uzs",
+    "updatedAt": "2026-07-08T03:57:54.151Z"
+  },
+  {
+    "title": "Tin tức 3",
+    "slug": "/tintuc-3",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-3f0bb6b3-be71-4b37-bd94-480eadb45335",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate3",
+          "props": {
+            "breadcrumb": "Trang chủ > Bài viết > Sự kiện > Sắm tết công nghệ - Nâng cấp thiết bị, khởi đầu...",
+            "articleTitle": "Sắm tết công nghệ - Nâng cấp thiết bị, khởi đầu bứt phá",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "01:00",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "Năm mới, vận hội mới, thiết bị cũng phải mới! Đầu tư cho công nghệ là đầu tư cho tương lai. Ghé 'Lục Giác' để chọn cho mình những siêu phẩm hỗ trợ đắc lực cho công việc và giải trí:\nHiệu năng đỉnh cao.\nThiết kế thời thượng.\nGiá tốt bất ngờ kèm quà tặng Tết giá trị.",
+            "image": "https://beta-api.hexagon.xyz/uploads/sam-tet-cong-nghe-1774343703442-177870451.jpg",
+            "content": "Đừng chỉ bắt đầu năm mới - hãy chinh phục nó với những công cụ phù hợp!",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Giải pháp công nghệ",
+                "description": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt theo nhu cầu và định hướng.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững...",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Mang đến đa dạng các thiết bị và phần mềm chất lượng cao, phục vụ từ cá nhân đến doanh nghiệp, đảm bảo tính bền bỉ và công nghệ hiện đại.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống mạng, camera chuyên nghiệp, đảm bảo kết nối ổn định, an toàn và phù hợp với mọi quy mô.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "title": "Không khí tưng bừng tại Chương trình Teambuilding myH25 tại Ngôi...",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "title": "Đồng hành cùng sinh viên Đại học Văn Hiến tại Ngày hội sinh viên",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate3-2c188b43-6894-4728-b190-bb4d855351a5",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-1eae52db-cb2c-494c-975b-369a8d71f961",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783414492721kkc5mmnay2b",
+    "updatedAt": "2026-07-08T11:45:26.102Z"
+  },
+  {
+    "title": "Tin tức 4",
+    "slug": "/tintuc-4",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-1fa1480a-36f1-49a3-ad38-09696917e161",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate4",
+          "props": {
+            "breadcrumb": "Trang chủ > Bài viết > Tin tức > Bài viết 4",
+            "articleTitle": "Bài viết 4",
+            "metaDate": "25 tháng 6, 2026",
+            "metaTime": "18:58",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "Bài viết 4",
+            "image": "",
+            "content": "",
+            "tags": "",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Giải pháp công nghệ",
+                "description": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt theo nhu cầu và định hướng.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững...",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Mang đến đa dạng các thiết bị và phần mềm chất lượng cao, phục vụ từ cá nhân đến doanh nghiệp, đảm bảo tính bền bỉ và công nghệ hiện đại.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống mạng, camera chuyên nghiệp, đảm bảo kết nối ổn định, an toàn và phù hợp với mọi quy mô.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/ai-phan-tich-du-lieu-1773291405655-118730188-1774254824600-959205718.jpg",
+                "title": "Bài viết 5",
+                "date": "25 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate4-9abbca74-def4-45bb-a128-5b8227991d2e",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-02d4eddb-50b2-4830-b90f-ad08a8801256",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "178341473624175j5mhu310g",
+    "updatedAt": "2026-07-08T11:45:45.896Z"
+  },
+  {
+    "title": "Tin tức 5",
+    "slug": "/tintuc-5",
+    "language": "VI",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-7760e774-e863-404f-86af-ede4c822e758",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate5",
+          "props": {
+            "breadcrumb": "Trang chủ > Bài viết > Tin tức > Bài viết 5",
+            "articleTitle": "Bài viết 5",
+            "metaDate": "25 tháng 6, 2026",
+            "metaTime": "",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "Bài viết 5",
+            "image": "",
+            "content": "",
+            "tags": "",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Giải pháp công nghệ",
+                "description": "Phát triển và triển khai các giải pháp phần mềm tùy chỉnh, tối ưu vận hành doanh nghiệp, nâng cao hiệu suất, đáp ứng linh hoạt theo nhu cầu và định hướng.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Giải pháp thi công & lắp đặt",
+                "description": "Tư vấn chiến lược chuyển đổi số toàn diện, giúp doanh nghiệp tối ưu quy trình, nâng cao trải nghiệm khách hàng và tăng trưởng bền vững...",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Cung cấp thiết bị CNTT",
+                "description": "Mang đến đa dạng các thiết bị và phần mềm chất lượng cao, phục vụ từ cá nhân đến doanh nghiệp, đảm bảo tính bền bỉ và công nghệ hiện đại.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Dịch vụ Công nghệ thông tin",
+                "description": "Thi công và lắp đặt hệ thống mạng, camera chuyên nghiệp, đảm bảo kết nối ổn định, an toàn và phù hợp với mọi quy mô.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/phattrienphanmem-1773133089066-706455049.png",
+                "title": "Bài viết 4",
+                "date": "25 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate5-1d19fc27-4e34-4961-9b67-a039517b56b9",
+            "lang": "vi"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-c769171d-e366-44f1-94a5-49cd9985cdd7",
+            "lang": "vi"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783414973177dmj6soo0z1r",
+    "updatedAt": "2026-07-08T11:45:56.952Z"
+  },
+  {
+    "title": "Giải pháp công nghệ  (EN)",
+    "slug": "/giaiphap-congngheen",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Home",
+                "url": "#"
+              },
+              {
+                "text": "About Us",
+                "url": "#"
+              },
+              {
+                "text": "Services",
+                "url": "#"
+              },
+              {
+                "text": "Support",
+                "url": "#"
+              },
+              {
+                "text": "Contact",
+                "url": "#"
+              }
+            ],
+            "id": "Header-78e441cd-0d3b-4001-b68a-bb094034884d",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "ServicePageTemplate",
+          "props": {
+            "breadcrumb": "Home > Services > Technology solutions",
+            "heroTitle": "Technology solutions",
+            "heroDescription": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+            "buttonText": "Contact for consultation",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+            "solutionsTitle": "Outstanding solution",
+            "cards": [
+              {
+                "title": "",
+                "description": "Outstanding solution"
+              },
+              {
+                "title": "",
+                "description": "\nDigital Transformation"
+              },
+              {
+                "title": "",
+                "description": "Platform & System Integration"
+              }
+            ],
+            "processTitle": "Implementation process",
+            "processSubtitle": "The process is professional, transparent, and efficient.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Discovery & Analysis"
+              },
+              {
+                "number": "02",
+                "text": "Solution Design"
+              },
+              {
+                "number": "03",
+                "text": "Development & Testing"
+              },
+              {
+                "number": "04",
+                "text": "Deployment & Maintenance"
+              }
+            ],
+            "ctaTitle": "Ready to deploy?",
+            "ctaSubtitle": "Don't let technology be a barrier. Turn it into your competitive advantage with Hexagon.",
+            "primaryButtonText": "Back to Homepage",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Contact us now",
+            "secondaryButtonUrl": "/",
+            "id": "ServicePageTemplate-e99bfdbe-c411-44d0-966e-f6336957a97e",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-6147edab-af58-40f7-bc22-1da3fc0c7a57",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783415106044371arzmmlsb",
+    "updatedAt": "2026-07-08T13:52:40.889Z"
+  },
+  {
+    "title": "Giải pháp thi công và lắp đặt  (EN)",
+    "slug": "/giaiphapthicong-lapdaten",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-282f1579-8716-4ea7-843e-f87b077075d2",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "ConstructionServiceTemplate",
+          "props": {
+            "breadcrumb": "Home > Services > Construction & Installation Solutions",
+            "heroTitle": "Construction & Installation Solutions",
+            "heroDescription": "",
+            "buttonText": "Contact for consuiltation",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-4-1782723514901-308215051.jpg",
+            "solutionsTitle": "",
+            "cards": [],
+            "processTitle": "",
+            "processSubtitle": "",
+            "steps": [],
+            "ctaTitle": "Yes",
+            "ctaSubtitle": "Contact us to receive the most suitable solution consulting for your business.",
+            "primaryButtonText": "Contact Us",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Back to home",
+            "secondaryButtonUrl": "/",
+            "id": "ConstructionServiceTemplate-0d16c4fc-aa71-4c32-894c-4a8ec609305f",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-0b6dce40-5f5e-495f-b8a0-acef6e11fe57",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783416111097bg7b16n2gic",
+    "updatedAt": "2026-07-08T13:53:11.609Z"
+  },
+  {
+    "title": "Cung cấp thiết bị CNTT (EN)",
+    "slug": "/cungcaothietbiCNTTen",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-c05f286e-de96-46c4-9712-db9e5af1fca9",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "ITEquipmentServiceTemplate",
+          "props": {
+            "breadcrumb": "Home > Services > Providing IT equipment",
+            "heroTitle": "Providing IT equipment",
+            "heroDescription": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+            "buttonText": "Cuntact us for consultation",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+            "solutionsTitle": "Outstanding solution",
+            "cards": [
+              {
+                "title": "Data Platform & Data Warehouse",
+                "description": ""
+              },
+              {
+                "title": "Data Analytics & BI",
+                "description": ""
+              },
+              {
+                "title": " AI Solutions",
+                "description": ""
+              }
+            ],
+            "processTitle": "Implementation process",
+            "processSubtitle": "The process is professional, transparent, and efficient.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Data Collection & Processing"
+              },
+              {
+                "number": "02",
+                "text": "Data Architecture Design"
+              },
+              {
+                "number": "03",
+                "text": "Model Development"
+              },
+              {
+                "number": "04",
+                "text": "Deployment & Optimization"
+              }
+            ],
+            "ctaTitle": "Ready to deploy?",
+            "ctaSubtitle": "Don't let technology be a barrier. Turn it into your competitive advantage with Hexagon.",
+            "primaryButtonText": "Contact us now",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Back to homepage",
+            "secondaryButtonUrl": "/",
+            "id": "ITEquipmentServiceTemplate-cd4f8fc0-e5f8-4c80-bcfb-ba4c31f87479",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-2021e164-d119-4600-a9c0-c287d01241b8",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783480684136xo10v9mnq9",
+    "updatedAt": "2026-07-08T13:53:40.977Z"
+  },
+  {
+    "title": "Dịch vụ Công nghệ thông tin  (EN)",
+    "slug": "/dichvucongnghethongtinen",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-7e3dfe41-228e-4297-bfa4-eb776103fa1d",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "ITServicesTemplate",
+          "props": {
+            "breadcrumb": "Home > Services > Information Technology Services",
+            "heroTitle": "Information Technology Services",
+            "heroDescription": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+            "buttonText": "Contact us for consultation",
+            "buttonUrl": "#",
+            "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+            "solutionsTitle": "Outstanding solution",
+            "cards": [
+              {
+                "title": "CCTV Solutions",
+                "description": ""
+              },
+              {
+                "title": "Enterprise WiFi Solutions",
+                "description": ""
+              },
+              {
+                "title": "Network Infrastructure",
+                "description": ""
+              }
+            ],
+            "processTitle": "Implementation process",
+            "processSubtitle": "A scientific process, from ideation to operation, ensures that the project delivers practical value and aligns with business objectives.",
+            "steps": [
+              {
+                "number": "01",
+                "text": "Site Survey"
+              },
+              {
+                "number": "02",
+                "text": "System Design"
+              },
+              {
+                "number": "03",
+                "text": "Installation"
+              },
+              {
+                "number": "04",
+                "text": "Handover & Maintenance"
+              }
+            ],
+            "ctaTitle": "Ready to deploy?",
+            "ctaSubtitle": "Don't let technology be a barrier. Turn it into your competitive advantage with Hexagon.",
+            "primaryButtonText": "Contact us for consultation",
+            "primaryButtonUrl": "#",
+            "secondaryButtonText": "Back to homepage",
+            "secondaryButtonUrl": "/",
+            "id": "ITServicesTemplate-02149766-9267-4323-8d29-d526f316dc0b",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-4e153e15-b52c-48ec-8ae1-8a574f0e0a24",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783481103534g043xhgkga9",
+    "updatedAt": "2026-07-08T13:54:21.121Z"
+  },
+  {
+    "title": "Tin tức 1 (EN)",
+    "slug": "/tintuc-1en",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-615940d5-e3f6-42ee-ae90-e1257b1f34b7",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate",
+          "props": {
+            "breadcrumb": "Home › Articles › Activities › A lively atmosphere at the myH25 Teambuilding",
+            "articleTitle": "A lively atmosphere at the myH25 Teambuilding Program at Hung Hau House.",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "02:54",
+            "metaLanguage": "English",
+            "summary": "Let's look back at the most beautiful and memorable moments of the HHC family during the MYH25 TEAMBUILDING, held at the Vinpearl Nha Trang resort.",
+            "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+            "content": "Joining the vibrant atmosphere, the HHC family participated in sightseeing activities, outdoor trips, and strengthened bonds on the beautiful island of Vinpearl Nha Trang. Members and their families enjoyed meaningful, warm moments and experienced well-deserved values there.\n\n\n\nTeambuilding is not just an activity to foster team spirit, it is also an opportunity for all departments, teams, and individuals to reflect on and be proud of the achievements gained, as well as the challenges we have overcome together. This is the perfect platform to prepare for a joyous new start, promising a new journey with even greater success.\n\n\n\nBidding farewell to Vinpearl Nha Trang with countless beautiful memories, let's carry this positive energy back to work, continuing to be unanimous, united, and steadfastly move forward to conquer bigger goals.\n\nHHC - Ready to break through!",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Related articles",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "title": "Accompanying Van Hien Univerity Students at the student festival",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate-4dd1680e-780c-4ac9-8cd9-d0722716adf8",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-0fd4d397-c19d-4014-8fcb-7aaea047c7b3",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783481444863ichzxzclp4n",
+    "updatedAt": "2026-07-08T11:47:05.391Z"
+  },
+  {
+    "title": "Tin tức 2 (EN)",
+    "slug": "/tintuc-2en",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-a8ee1654-a87b-43ba-8b82-ea942379a231"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate2",
+          "props": {
+            "breadcrumb": "Home › Articles › Activities › Accompanying Van Hien Univerity Students at the",
+            "articleTitle": "Accompanying Van Hien Univerity Students at the student festival",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "01:25",
+            "metaLanguage": "English",
+            "summary": "Hexagon JSC. is honored to accompany the IT students at Van Hien University in the “VHE Startup Devote” competition.\n\n\n\nDuring the event, Hexagon JSC. supported students in developing a business model for electronic technology devices and shared insights on how to present a professional and feasible business plan.\n\n",
+            "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+            "content": "Thanks to practical experience from our company and the creativity of Van Hien’s talented students, Team myU successfully impressed the judges and proudly won the First Prize.\n\n\n\nThis achievement not only highlights the professionalism and potential of Van Hien students but also shows the promising business model and future vision of Hexagon JSC.\n\n\n\nWe look forward to continuing our collaboration with students to inspire the entrepreneurial spirit in this digital era.\n\n",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Contact for consultation",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Construction & Installation Solutions",
+                "description": "",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "title": "Let's look back at the most beautiful and memorable moments of the HHC family during the MYH25 TEAMBUILDING, held at the Vinpearl Nha Trang resort.",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate2-404e9dae-24cc-4470-be5f-1419bbf9c911"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-d32d0ea2-ee65-4978-bbf5-0fa639194aec"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783482611656d66kdd4wzwm",
+    "updatedAt": "2026-07-08T13:46:20.201Z"
+  },
+  {
+    "title": "Tin tức 3 (EN)",
+    "slug": "/tintuc-3en",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-3f0bb6b3-be71-4b37-bd94-480eadb45335"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate3",
+          "props": {
+            "breadcrumb": "Home › Articles › Events › Upgrade your tech - Empower your new year",
+            "articleTitle": "Upgrade your tech - Empower your new year breakthrough",
+            "metaDate": "26 tháng 6, 2026",
+            "metaTime": "01:00",
+            "metaLanguage": "English",
+            "summary": "New Year, New Success, New Gear! Investing in technology is investing in your future.\n\nVisit ‘Luc Giac’ today to discover the ultimate devices tailored for both high-performance work and premium entertainment\n\nPeak Performance: Smash every goal with cutting-edge power.\nTrendy Design: Sleek, modern, and stylish for the new season.\nUnbeatable Prices: Amazing deals with exclusive Lunar New Year gifts.\n",
+            "image": "https://beta-api.hexagon.xyz/uploads/sam-tet-cong-nghe-1774343703442-177870451.jpg",
+            "content": "",
+            "tags": "#HexagonCorporation #SGD #Technology",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Construction & Installation Solutions",
+                "description": "",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/teambuilding-01-1774341835079-253071961.jpg",
+                "title": "A lively atmosphere at the myH25 Teambuilding Program at Hung Hau House.",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/myc-dong-hanh-1-1774341526337-531129418.jpg",
+                "title": "Accompanying Van Hien Univerity Students at the student festival",
+                "date": "26 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate3-2c188b43-6894-4728-b190-bb4d855351a5"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-1eae52db-cb2c-494c-975b-369a8d71f961"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783483095150dgjnrt98ngc",
+    "updatedAt": "2026-07-08T04:44:52.152Z"
+  },
+  {
+    "title": "Tin tức 4 (EN)",
+    "slug": "/tintuc-4en",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-1fa1480a-36f1-49a3-ad38-09696917e161",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate4",
+          "props": {
+            "breadcrumb": "Home › Articles › News › 4",
+            "articleTitle": "4",
+            "metaDate": "25 tháng 6, 2026",
+            "metaTime": "18:58",
+            "metaLanguage": "Tiếng Việt",
+            "summary": "4",
+            "image": "",
+            "content": "",
+            "tags": "",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Construction & Installation Solutions",
+                "description": "",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Related articles",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/ai-phan-tich-du-lieu-1773291405655-118730188-1774254824600-959205718.jpg",
+                "title": "5",
+                "date": "25 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate4-9abbca74-def4-45bb-a128-5b8227991d2e",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-02d4eddb-50b2-4830-b90f-ad08a8801256",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783484202015cwgbmo6fcth",
+    "updatedAt": "2026-07-08T11:47:18.935Z"
+  },
+  {
+    "title": "Tin tức 5 (EN)",
+    "slug": "/tintuc-5en",
+    "language": "EN",
+    "status": "Đã xuất bản",
+    "content": {
+      "root": {
+        "props": {
+          "title": "Trang mới",
+          "slug": "/trang-moi"
+        }
+      },
+      "content": [
+        {
+          "type": "Header",
+          "props": {
+            "logoText": "HEXAGON",
+            "logoSrc": "/favicon.svg",
+            "backgroundColor": "#1A6B49",
+            "menuItems": [
+              {
+                "text": "Trang chủ",
+                "url": "#"
+              },
+              {
+                "text": "Giới thiệu",
+                "url": "#"
+              },
+              {
+                "text": "Dịch vụ",
+                "url": "#"
+              },
+              {
+                "text": "Hỗ trợ",
+                "url": "#"
+              },
+              {
+                "text": "Liên hệ",
+                "url": "#"
+              }
+            ],
+            "id": "Header-7760e774-e863-404f-86af-ede4c822e758",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "NewsArticleTemplate5",
+          "props": {
+            "breadcrumb": "Home › Articles › News › 5",
+            "articleTitle": "5",
+            "metaDate": "25 tháng 6, 2026",
+            "metaTime": "",
+            "metaLanguage": "English",
+            "summary": "5",
+            "image": "",
+            "content": "",
+            "tags": "",
+            "companyName": "HEXAGON CORPORATION",
+            "companyAddress": "615 Au Co Str, Tan Phu Ward, HCMC",
+            "companyHotline": "+84 70 390 9333",
+            "widgetTitle": "DỊCH VỤ CỦA CHÚNG TÔI",
+            "widgetServices": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-3-1782723514885-362139381.jpg",
+                "title": "Technology solutions",
+                "description": "Develop and deliver customized software solutions to optimize business operations, enhance efficiency, and flexibly adapt to specific requirements and long-term growth strategies.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Construction & Installation Solutions",
+                "description": "",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-2-1782723514900-716634177.jpg",
+                "title": "Providing IT equipment",
+                "description": "Offer AI and data analytics solutions to enable intelligent decision-making, automate processes, and unlock the full value of enterprise data assets.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              },
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/dv-1-1782723514912-477828992.jpg",
+                "title": "Information Technology Services",
+                "description": "Design and install professional camera surveillance and WiFi systems, ensuring security, stable connectivity, and scalability for businesses of all sizes.",
+                "linkText": "Tìm hiểu thêm",
+                "link": "#"
+              }
+            ],
+            "relatedTitle": "Bài viết liên quan",
+            "relatedArticles": [
+              {
+                "image": "https://beta-api.hexagon.xyz/uploads/phattrienphanmem-1773133089066-706455049.png",
+                "title": "4",
+                "date": "25 tháng 6, 2026",
+                "link": "#"
+              }
+            ],
+            "id": "NewsArticleTemplate5-1d19fc27-4e34-4961-9b67-a039517b56b9",
+            "lang": "en"
+          }
+        },
+        {
+          "type": "Footer",
+          "props": {
+            "copyrightText": "Copyright 2026 © Hexagon Corporation. All rights reserved.",
+            "id": "Footer-c769171d-e366-44f1-94a5-49cd9985cdd7",
+            "lang": "en"
+          }
+        }
+      ],
+      "zones": {}
+    },
+    "id": "1783484375583co0t96jgeq7",
+    "updatedAt": "2026-07-08T11:47:29.287Z"
+  }
+]
