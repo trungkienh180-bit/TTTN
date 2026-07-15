@@ -1,0 +1,340 @@
+/* style.css - CSS tùy chỉnh */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #2a0845 url('src/BGTRANGVOTING.png') no-repeat center top;
+    background-size: 100% auto;
+    color: white;
+}
+
+.text-gold {
+    color: #ffd700; /* Vàng */
+}
+
+/* Header */
+.top-bar {
+    background-color: #8c1097; /* Màu nền thanh header */
+    height: 60px;
+    position: relative;
+    z-index: 10;
+}
+.header-container {
+    max-width: 900px;
+}
+.btn-login {
+    background-color: #0084ff; 
+    border-radius: 2px; 
+    padding: 4px 16px; 
+    border: 1px solid #fff; 
+    font-size: 13px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    top: 60px; /* Cố định mốc tại mép dưới header (60px) */
+    transform: translate(-50%, -35%); /* Trả lại vị trí đè 20% lên header như cũ */
+    width: 380px; 
+    z-index: 100;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 380px;
+}
+.main-title {
+    max-width: 650px;
+    margin-top: 30px; /* Giảm margin để đẩy chữ lên cao, tránh bị thanh menu đè */
+    z-index: 2;
+}
+
+/* Navigation */
+.nav-menu {
+    max-width: 1050px; /* Kéo dài khung ra thêm khoảng 10% */
+    margin-top: 70px; 
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-link-img {
+    transform: translateY(-60%);
+}
+.nav-link-img img {
+    height: 55px;
+    transition: transform 0.2s;
+}
+.nav-link-img:hover img {
+    transform: scale(1.05);
+}
+.nav-btn-center {
+    z-index: 15;
+    position: relative;
+    margin: 0 10px;
+    transform: translateY(-40%); /* Nâng nút Vote Ngay lên lại như cũ */
+}
+.nav-btn-center img {
+    height: 176px; /* Phóng to lên lại 10% */
+    filter: drop-shadow(0 0 25px rgba(255, 200, 0, 0.8)); /* Tạo hiệu ứng logo phát sáng */
+    transition: transform 0.2s, filter 0.2s;
+}
+.nav-btn-center:hover img {
+    transform: scale(1.05);
+}
+
+/* Bảng Xếp Hạng */
+.bxh-tab {
+    max-width: 220px;
+    transition: transform 0.2s;
+    mix-blend-mode: screen;
+}
+.bxh-tab:hover {
+    transform: scale(1.05);
+}
+.leaderboard-rows::-webkit-scrollbar {
+    width: 6px;
+}
+.leaderboard-rows::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+.leaderboard-rows::-webkit-scrollbar-thumb {
+    background: rgba(0, 210, 255, 0.5);
+    border-radius: 3px;
+}
+.leaderboard-rows::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 210, 255, 0.8);
+}
+
+/* Main Content */
+.main-content {
+    /* Optional: thêm chút nền tối mờ để dễ nhìn nếu background quá sáng */
+    /* background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px; */
+}
+
+/* Titles */
+.section-title-img {
+    max-width: 450px;
+}
+
+/* Lưới 4 ô vuông trong phần thưởng */
+.reward-box-grid {
+    width: 100%;
+    max-width: 160px; /* Phóng to khung ngoài lên 160px */
+}
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px; /* Tăng khoảng cách chút cho thoáng */
+    padding: 27% 24% 22% 16%; /* Tăng đều padding 4 góc thêm 4% để thu nhỏ 4 ô vuông lại */
+}
+.square-item {
+    background-color: #d9d9d9;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+}
+
+/* Filters */
+.custom-select {
+    background-color: #2b3bb3;
+    color: white;
+    border: 1px solid #00d2ff;
+    padding: 8px 15px;
+    font-size: 14px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    border-radius: 4px;
+}
+.custom-select:focus {
+    background-color: #2b3bb3;
+    color: white;
+    border-color: #00d2ff;
+    box-shadow: none;
+}
+.custom-search {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.custom-search .form-control {
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    padding-left: 15px;
+}
+.input-group-text {
+    border: none;
+    color: #1a3c9f;
+    background: white !important;
+}
+
+/* Candidate Card */
+.candidate-card {
+    background: url('src/card.png') no-repeat center center;
+    background-size: 100% 100%;
+    padding: 6px;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+.card-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    padding: 2px;
+}
+.character-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.card-stats {
+    display: flex;
+    margin-top: 5px;
+    gap: 5px;
+}
+.rank-badge {
+    background-color: #bd1fb1;
+    color: white;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    flex: 0 0 auto;
+}
+.vote-badge {
+    background-color: #150974;
+    color: white;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    flex: 1;
+    text-align: right;
+}
+.card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+}
+.card-info h5 {
+    font-size: 15px;
+    margin-bottom: 2px !important;
+}
+.card-info p {
+    font-size: 12px;
+}
+
+/* Pagination */
+.custom-pagination {
+    margin: 0;
+    padding: 0;
+}
+.page-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #1a3c9f;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #00d2ff;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+.page-btn:hover, .page-btn.active {
+    background-color: #00d2ff;
+    color: #1a3c9f;
+    font-weight: bold;
+}
+
+/* Rewards Section */
+.rewards-section {
+    margin-bottom: 100px;
+}
+.flower-icon {
+    height: 70px;
+    z-index: 5;
+    position: relative;
+}
+.btn-nhan {
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-nhan:hover {
+    transform: scale(1.05);
+}
+.reward-box-grid {
+    display: inline-block;
+    padding: 10px;
+}
+.milestone-item {
+    width: 25%;
+}
+.progress-bg {
+    top: 15px; /* Điều chỉnh thanh nằm ngang tâm cánh hoa */
+    z-index: 1;
+}
+
+/* Candidate Modal */
+.candidate-modal-content {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.modal-bg-img {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.custom-close-btn {
+    background: transparent !important;
+    border: none;
+    width: 70px;
+    height: 70px;
+    z-index: 9999 !important;
+    opacity: 1;
+    cursor: pointer;
+}
+.custom-close-btn:hover {
+    transform: scale(1.1);
+}
+.hover-scale {
+    transition: transform 0.2s;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+.flower-input:focus {
+    box-shadow: 0 0 10px #4a7cff !important;
+    outline: none;
+}
+
+/* History Modal Table */
+.history-table {
+    --bs-table-bg: transparent;
+}
+.history-table th, .history-table td {
+    border: 1px solid #140d3a !important;
+    vertical-align: middle;
+    color: white !important;
+}
+.history-table thead th {
+    background-color: #24195d !important;
+}
+.history-table tbody tr:nth-child(odd) td {
+    background-color: #353082 !important;
+}
+.history-table tbody tr:nth-child(even) td {
+    background-color: #252266 !important;
+}

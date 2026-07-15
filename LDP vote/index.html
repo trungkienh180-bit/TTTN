@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDP Vote - Hào Khí Du Hiệp</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <!-- Top Bar -->
+    <header class="top-bar position-relative z-3">
+        <div class="container header-container h-100 d-flex justify-content-between align-items-center position-relative px-3">
+            <!-- Trái: Logo Game -->
+            <div class="d-flex align-items-center z-3">
+                <img src="src/iconapp.png" alt="Icon Game" style="height: 65px; object-fit: contain;">
+            </div>
+
+            <!-- Phải: Nút Home, FB, Đăng nhập -->
+            <div class="d-flex align-items-center gap-3 z-3">
+                <a href="#" class="text-white text-decoration-none"><i class="fas fa-home fs-5"></i></a>
+                <a href="#" class="text-white text-decoration-none"><i class="fab fa-facebook fs-5"></i></a>
+                <a href="#">
+                    <button class="btn fw-bold text-white btn-login">ĐĂNG NHẬP</button>
+                </a>
+            </div>
+
+            <!-- Logo Hào Khí Du Hiệp (Ở giữa) -->
+            <div class="logo-center">
+                <img src="src/Logo-HaoKhiDuHiep.png" alt="Logo Game" class="img-fluid">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (MISS MISTER text) -->
+    <div class="hero-section d-flex justify-content-center align-items-center position-relative">
+        <img src="src/text.png" alt="Miss Mister Text" class="img-fluid main-title">
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu d-flex justify-content-center align-items-center position-relative mx-auto z-2">
+        <img src="src/khungdautrang.png" alt="Background Thanh" class="nav-bg position-absolute w-100">
+        <div class="nav-items d-flex justify-content-center align-items-center position-relative z-1">
+            <a href="#" class="nav-link-img"><img src="src/hd.png" alt="Hướng Dẫn"></a>
+            <a href="#" class="nav-link-img"><img src="src/hoafree.png" alt="Hoa Free"></a>
+            
+            <!-- VOTE NGAY center button -->
+            <a href="#" class="nav-btn-center mx-2 mx-md-4 position-relative">
+                <img src="src/votengay.png" alt="Vote Ngay">
+            </a>
+            
+            <a href="#" class="nav-link-img"><img src="src/quatichluy.png" alt="Quà Tích Lũy"></a>
+            <a href="#" class="nav-link-img"><img src="src/naphoa.png" alt="Nạp Hoa"></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pb-5 position-relative main-content">
+        
+        <!-- Danh Sách Thí Sinh Section -->
+        <section class="candidates-section mb-5">
+            <div class="text-center mb-4">
+                <img src="src/danhsachthisinh.png" alt="Danh Sách Thí Sinh" class="section-title-img">
+            </div>
+
+            <!-- Filters & Search -->
+            <div class="row filter-row mb-4 justify-content-center px-3">
+                <div class="col-md-3 col-6 mb-2">
+                    <select class="form-select custom-select">
+                        <option>Sắp xếp</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <select class="form-select custom-select">
+                        <option>Chọn giới tính</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <select class="form-select custom-select">
+                        <option>Chọn máy chủ</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <div class="input-group custom-search">
+                        <input type="text" class="form-control" placeholder="Tìm thí sinh theo Số Báo Danh">
+                        <span class="input-group-text bg-white"><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid Thí Sinh -->
+            <div class="row row-cols-2 row-cols-md-3 g-4 px-3 w-100 justify-content-center mx-auto" style="max-width: 1050px;">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="col">
+                    <div class="position-relative w-100 candidate-item hover-scale" data-bs-toggle="modal" data-bs-target="#candidateModal" style="cursor: pointer;">
+                        <img src="src/card.png" class="img-fluid w-100" alt="Thí sinh">
+                        <div class="position-absolute w-100 d-flex justify-content-between px-3" style="top: 65%;">
+                            <span class="text-white fw-bold" style="font-size: 14px;"><i class="fas fa-chart-bar"></i> 999</span>
+                            <span class="text-white fw-bold" style="font-size: 14px;">9999 <img src="src/hoa.png" style="height:14px; margin-top:-2px" alt="hoa"></span>
+                        </div>
+                        <div class="position-absolute w-100 text-center" style="top: 80%;">
+                            <h6 class="mb-1 fw-bold text-gold" style="font-size: 15px;">Tên thí sinh - SBD 1234</h6>
+                            <p class="mb-0 text-white" style="font-size: 11px;">Server 01 - Lý Bạch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-5">
+                <ul class="custom-pagination d-flex list-unstyled gap-2">
+                    <li><a href="#" class="page-btn">Đầu</a></li>
+                    <li><a href="#" class="page-btn">Trang Trước</a></li>
+                    <li><a href="#" class="page-btn active">1</a></li>
+                    <li><a href="#" class="page-btn">2</a></li>
+                    <li><a href="#" class="page-btn">3</a></li>
+                    <li><a href="#" class="page-btn">Trang Sau</a></li>
+                    <li><a href="#" class="page-btn">Cuối</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tích Lũy Mốc Đổi Quà Section -->        <!-- Tích Lũy Mốc Đổi Quà Section -->
+        <section class="rewards-section mt-5 pt-4 text-center">
+            <div class="mb-4">
+                <img src="src/tichluymocdoiqua.png" alt="Tích Lũy Mốc Đổi Quà" class="section-title-img">
+            </div>
+            
+            <p class="text-white mb-4 fs-5 fw-bold">Đã tích lũy <span class="text-gold">0</span> hoa</p>
+
+            <div class="progress-container position-relative mx-auto mt-5" style="max-width: 800px;">
+                <!-- Thanh progress nền -->
+                <div class="progress-bg position-absolute w-100">
+                    <img src="src/thanh.png" alt="Thanh" class="w-100">
+                </div>
+                
+                <!-- Các mốc hoa -->
+                <div class="milestones d-flex justify-content-between position-relative z-2 px-3" style="top: -20px;">
+                    <!-- Mốc 1 -->
+                    <div class="milestone-item text-center">
+                        <img src="src/hoa 2.png" alt="Hoa" class="flower-icon mb-2">
+                        <div class="text-white fw-bold">50 Hoa</div>
+                        <div class="reward-box-grid mt-3 position-relative d-inline-block">
+                            <img src="src/boxitem.png" class="img-fluid" alt="Box Item">
+                            <div class="items-grid position-absolute w-100 h-100 top-0 start-0">
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <img src="src/buttonnhan.png" alt="Nhận" class="btn-nhan img-fluid hover-scale" data-bs-toggle="modal" data-bs-target="#nhanCodeModal">
+                        </div>
+                    </div>
+                    <!-- Mốc 2 -->
+                    <div class="milestone-item text-center">
+                        <img src="src/hoa 2.png" alt="Hoa" class="flower-icon mb-2">
+                        <div class="text-white fw-bold">150 Hoa</div>
+                        <div class="reward-box-grid mt-3 position-relative d-inline-block">
+                            <img src="src/boxitem.png" class="img-fluid" alt="Box Item">
+                            <div class="items-grid position-absolute w-100 h-100 top-0 start-0">
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <img src="src/buttonnhan.png" alt="Nhận" class="btn-nhan img-fluid hover-scale" data-bs-toggle="modal" data-bs-target="#nhanCodeModal">
+                        </div>
+                    </div>
+                    <!-- Mốc 3 -->
+                    <div class="milestone-item text-center">
+                        <img src="src/hoa 2.png" alt="Hoa" class="flower-icon mb-2">
+                        <div class="text-white fw-bold">500 Hoa</div>
+                        <div class="reward-box-grid mt-3 position-relative d-inline-block">
+                            <img src="src/boxitem.png" class="img-fluid" alt="Box Item">
+                            <div class="items-grid position-absolute w-100 h-100 top-0 start-0">
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <img src="src/buttonnhan.png" alt="Nhận" class="btn-nhan img-fluid hover-scale" data-bs-toggle="modal" data-bs-target="#nhanCodeModal">
+                        </div>
+                    </div>
+                    <!-- Mốc 4 -->
+                    <div class="milestone-item text-center">
+                        <img src="src/hoa 2.png" alt="Hoa" class="flower-icon mb-2">
+                        <div class="text-white fw-bold">1000 Hoa</div>
+                        <div class="reward-box-grid mt-3 position-relative d-inline-block">
+                            <img src="src/boxitem.png" class="img-fluid" alt="Box Item">
+                            <div class="items-grid position-absolute w-100 h-100 top-0 start-0">
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                                <div class="square-item"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <img src="src/buttonnhan.png" alt="Nhận" class="btn-nhan img-fluid hover-scale" data-bs-toggle="modal" data-bs-target="#nhanCodeModal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bảng Xếp Hạng Section -->
+        <section class="leaderboard-section text-center position-relative mt-5 mb-5 pt-3">
+            <!-- Nền khung BXH -->
+            <div class="position-relative d-inline-block w-100" style="max-width: 1000px;">
+                <img src="src/khungbxh.png" class="position-absolute w-100 h-100" style="top: 0; left: 0; mix-blend-mode: screen; z-index: 0;" alt="Khung BXH">
+                
+                <!-- Title BXH (Nằm đè lên viền trên của khung) -->
+                <img src="src/bxh.png" class="position-absolute" style="top: -5%; left: 50%; transform: translateX(-50%); width: 45%; max-width: 450px; mix-blend-mode: screen; z-index: 2;" alt="Bảng Xếp Hạng">
+
+                <!-- Nội dung bên trong khung -->
+                <div class="position-relative w-100 d-flex flex-column align-items-center" style="padding: 15% 5% 8% 5%; z-index: 1;">
+                    
+                    <!-- Tabs -->
+                    <div class="d-flex justify-content-center gap-2 gap-md-4 mb-3 w-100">
+                        <a href="#"><img src="src/bxhmynhan.png" class="img-fluid bxh-tab" alt="BXH Mỹ Nhân"></a>
+                        <a href="#"><img src="src/bxhmynam.png" class="img-fluid bxh-tab" alt="BXH Mỹ Nam"></a>
+                        <a href="#"><img src="src/bxhphugiap.png" class="img-fluid bxh-tab" alt="BXH Phú Giáp"></a>
+                    </div>
+
+                    <!-- Table Header -->
+                    <div class="d-flex justify-content-between text-white fw-bold w-100 mb-2 px-3 py-2 text-center" style="background: linear-gradient(90deg, rgba(30,60,180,0) 0%, rgba(30,60,180,0.8) 50%, rgba(30,60,180,0) 100%);">
+                        <div style="width: 15%;">HẠNG</div>
+                        <div style="width: 35%;">TÊN NHÂN VẬT</div>
+                        <div style="width: 25%;">MÁY CHỦ</div>
+                        <div style="width: 25%;">HOA NHẬN</div>
+                    </div>
+
+                    <!-- Table Rows -->
+                    <div class="w-100 text-white d-flex flex-column px-3 leaderboard-rows text-center" style="flex-grow: 1; margin-bottom: 20px;">
+                        <!-- Row 1 -->
+                        <div class="d-flex justify-content-between align-items-center w-100 py-3" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">
+                            <div style="width: 15%;"><img src="src/hang1.png" style="height: 60px; object-fit: contain;" alt="1"></div>
+                            <div style="width: 35%;">Lục Trà Bạc Hà</div>
+                            <div style="width: 25%;">S1 - Lý Bạch</div>
+                            <div style="width: 25%;">9999.9999</div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="d-flex justify-content-between align-items-center w-100 py-3" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">
+                            <div style="width: 15%;"><img src="src/hang2.png" style="height: 50px; object-fit: contain;" alt="2"></div>
+                            <div style="width: 35%;"></div>
+                            <div style="width: 25%;"></div>
+                            <div style="width: 25%;"></div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="d-flex justify-content-between align-items-center w-100 py-3" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">
+                            <div style="width: 15%;"><img src="src/hang3.png" style="height: 40px; object-fit: contain;" alt="3"></div>
+                            <div style="width: 35%;"></div>
+                            <div style="width: 25%;"></div>
+                            <div style="width: 25%;"></div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="d-flex justify-content-between align-items-center w-100 py-3" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">
+                            <div style="width: 15%; font-size: 20px; font-weight: bold; color: rgba(255,255,255,0.8);">4</div>
+                            <div style="width: 35%;"></div>
+                            <div style="width: 25%;"></div>
+                            <div style="width: 25%;"></div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="d-flex justify-content-between align-items-center w-100 py-3">
+                            <div style="width: 15%; font-size: 20px; font-weight: bold; color: rgba(255,255,255,0.8);">5</div>
+                            <div style="width: 35%;"></div>
+                            <div style="width: 25%;"></div>
+                            <div style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Candidate Info Modal -->
+<div class="modal fade" id="candidateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 850px;">
+        <div class="modal-content candidate-modal-content">
+            <!-- Background Popup với hiệu ứng screen -->
+            <img src="src/pop up_thongtinthising.png" class="position-absolute w-100 h-100 modal-bg-img" alt="Background Popup" style="mix-blend-mode: screen;">
+            
+            <button type="button" class="btn-close custom-close-btn position-absolute" data-bs-dismiss="modal" aria-label="Close" style="top: 13%; right: 0%;">
+            </button>
+
+            <div class="modal-body position-relative z-1 d-flex flex-column flex-md-row" style="padding: 12% 8% 8% 8%;">
+                
+                <!-- Cột trái: Ảnh thí sinh -->
+                <div class="col-md-5 d-flex flex-column align-items-center mb-3 mb-md-0 pe-md-3">
+                    <div class="main-img-container mb-2 position-relative w-100 text-center p-1 rounded" style="border: 2px solid #ff007f;">
+                        <!-- Frame/box for main image -->
+                        <img src="src/anhto.png" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;" alt="Ảnh chính">
+                    </div>
+                    <div class="d-flex justify-content-between w-100 mb-2 gap-2">
+                        <img src="src/anhnho1.png" class="img-fluid" style="width: 32%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid #ffd700;" alt="Ảnh 1">
+                        <img src="src/anhnho2.png" class="img-fluid" style="width: 32%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid #ffd700;" alt="Ảnh 2">
+                        <img src="src/anhnho3.png" class="img-fluid" style="width: 32%; aspect-ratio: 4/3; object-fit: cover; border: 1px solid #ffd700;" alt="Ảnh 3">
+                    </div>
+                    <p class="text-white fst-italic text-center w-100 mt-1" style="font-size: 11px;">*Bắt buộc phải đăng ký đủ 4 ảnh dự thi</p>
+                </div>
+
+                <!-- Cột phải: Thông tin & Vote -->
+                <div class="col-md-7 text-white ps-md-4 d-flex flex-column justify-content-between">
+                    <div class="mb-2" style="font-size: 13px;">
+                        <div class="d-flex justify-content-between mb-2 pb-1" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">
+                            <span class="text-white">Nhân Vật: <span class="text-gold fw-bold">Lục Trà Bạc Hà</span></span>
+                            <span class="text-white">SBD: <span class="text-gold fw-bold">01239</span></span>
+                        </div>
+                        <div class="mb-2 pb-1" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">Bang Hội: <span class="text-gold fw-bold">Lạc Viên</span></div>
+                        <div class="mb-2 pb-1" style="border-bottom: 1px dashed rgba(255,255,255,0.2);">Máy Chủ: <span class="text-gold fw-bold">S1-Lý Bạch</span></div>
+                        <div class="mt-2 text-white">Lời giới thiệu:</div>
+                        <p style="font-size: 12px; color: #ffd700; line-height: 1.4; margin-top: 5px;">Xin chào, mình là [Tên nhân vật]. Mình tham gia Mister để lưu giữ lại kỉ niệm và những khoảnh khắc đẹp.</p>
+                    </div>
+
+                    <!-- Khu vực Số hoa / Hạng -->
+                    <div class="vote-stats-box d-flex mb-3 position-relative" style="background: url('src/boxsohoa.png') center/100% 100% no-repeat; min-height: 65px;">
+                        <div class="w-50 text-center d-flex flex-column justify-content-center">
+                            <div style="font-size: 12px; color: white;">Số hoa đã nhận</div>
+                            <div class="fw-bold fs-5 text-white">9999 <img src="src/hoa.png" style="height: 16px; margin-top: -3px;" alt="hoa"></div>
+                        </div>
+                        <div class="w-50 text-center d-flex flex-column justify-content-center" style="border-left: 1px solid rgba(255,255,255,0.1);">
+                            <div style="font-size: 12px; color: white;"><i class="fas fa-medal"></i> Hạng</div>
+                            <div class="fw-bold fs-5 text-white">77</div>
+                        </div>
+                    </div>
+
+                    <!-- Tặng hoa input -->
+                    <div class="mb-3">
+                        <div class="text-white mb-2" style="font-size: 13px;">Số hoa muốn tặng:</div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm text-white fw-bold btn-minus d-flex align-items-center justify-content-center p-0" style="background: linear-gradient(180deg, #5916a6, #2d0e70); border: 1px solid #a35eff; border-radius: 4px; width: 32px; height: 32px; font-size: 18px;">-</button>
+                            <input type="text" class="form-control text-center text-white fw-bold flower-input px-1" value="10.000" style="background: rgba(16, 8, 48, 0.8); border: 1px solid #4a7cff; max-width: 130px; height: 32px; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">
+                            <button class="btn btn-sm text-white fw-bold btn-plus d-flex align-items-center justify-content-center p-0" style="background: linear-gradient(180deg, #5916a6, #2d0e70); border: 1px solid #a35eff; border-radius: 4px; width: 32px; height: 32px; font-size: 18px;">+</button>
+                            <img src="src/buttonmax.png" alt="MAX" class="cursor-pointer btn-max hover-scale ms-2" style="height: 32px; cursor: pointer;">
+                        </div>
+                    </div>
+
+                    <!-- Action buttons -->
+                    <div class="d-flex gap-3 justify-content-center mt-2">
+                        <img src="src/buttontanghoa.png" id="btnTangHoa" class="cursor-pointer hover-scale" style="height: 36px; cursor: pointer;" alt="Tặng Hoa">
+                        <img src="src/buttonlstang.png" id="btnLsTang" class="cursor-pointer hover-scale" style="height: 36px; cursor: pointer;" alt="Lịch Sử Tặng">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nhan Code Modal -->
+<div class="modal fade" id="nhanCodeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+        <div class="modal-content" style="background: transparent; border: none; box-shadow: none;">
+            <!-- Background Popup -->
+            <img src="src/popup_nhanhoafree.png" class="position-absolute w-100 h-100 modal-bg-img" alt="Background Popup" style="mix-blend-mode: screen;">
+            
+            <button type="button" class="btn-close custom-close-btn position-absolute" data-bs-dismiss="modal" aria-label="Close" style="top: 10%; right: 4%;">
+            </button>
+
+            <div class="modal-body position-relative z-1 text-center d-flex flex-column justify-content-center align-items-center" style="padding: 15% 10% 12% 10%;">
+                
+                <h5 class="text-white fw-bold mb-3 mt-2" style="line-height: 1.5; font-size: 17px; text-shadow: 0 0 5px rgba(255,255,255,0.3);">
+                    Đã đạt mốc XX,<br>
+                    Code của Đại Hiệp là:
+                </h5>
+                
+                <div class="code-box d-flex align-items-center justify-content-center w-100 mb-4" style="background-color: rgba(25, 45, 120, 0.7); border: 1px solid rgba(74, 124, 255, 0.5); border-radius: 2px; height: 38px; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">
+                    <span class="text-white fw-bold" style="letter-spacing: 1px; font-size: 15px;">ABACA0145656</span>
+                </div>
+                
+                <!-- Sao chép button -->
+                <div class="d-flex justify-content-center hover-scale mb-2" style="width: 170px; height: 42px; background: url('src/buttondongy.png') center/100% 100% no-repeat; cursor: pointer;">
+                    <span class="text-white fw-bold d-flex align-items-center justify-content-center h-100 w-100" style="text-shadow: 0 0 5px rgba(255,255,255,0.5); font-size: 14px;">SAO CHÉP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Vote Modal -->
+<div class="modal fade" id="successVoteModal" tabindex="-1" aria-hidden="true" style="z-index: 1060;">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+        <div class="modal-content" style="background: transparent; border: none; box-shadow: none;">
+            <!-- Background Popup -->
+            <img src="src/popup_nhanhoafree.png" class="position-absolute w-100 h-100 modal-bg-img" alt="Background Popup" style="mix-blend-mode: screen;">
+            
+            <button type="button" class="btn-close custom-close-btn position-absolute" data-bs-dismiss="modal" aria-label="Close" style="top: 10%; right: 4%;">
+            </button>
+
+            <div class="modal-body position-relative z-1 text-center d-flex flex-column justify-content-center align-items-center" style="padding: 20% 10% 20% 10%; min-height: 220px;">
+                <h4 class="text-white fw-bold mb-0" style="text-shadow: 0 0 5px rgba(255,255,255,0.5);">
+                    ĐÃ TẶNG HOA THÀNH CÔNG
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- History Modal -->
+<div class="modal fade" id="historyModal" tabindex="-1" aria-hidden="true" style="z-index: 1060;">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 550px;">
+        <div class="modal-content" style="background: transparent; border: none; box-shadow: none;">
+            <!-- Background Popup -->
+            <img src="src/popup_nhanhoafree.png" class="position-absolute w-100 h-100 modal-bg-img" alt="Background Popup" style="mix-blend-mode: screen;">
+            
+            <!-- Title Banner -->
+            <div class="position-absolute w-100 text-center" style="top: -6%; z-index: 2;">
+                <div class="d-inline-block position-relative">
+                    <!-- Giả định dùng bxh.png hoặc một box text tương tự để làm nền -->
+                    <img src="src/boxtext bự.png" style="height: 55px;" alt="Title BG">
+                    <span class="position-absolute top-50 start-50 translate-middle text-white fw-bold fs-5" style="white-space: nowrap; text-shadow: 0 0 5px rgba(255,255,255,0.5);">LỊCH SỬ</span>
+                </div>
+            </div>
+
+            <button type="button" class="btn-close custom-close-btn position-absolute" data-bs-dismiss="modal" aria-label="Close" style="top: 9%; right: 3%;">
+            </button>
+
+            <div class="modal-body position-relative z-1 d-flex flex-column" style="padding: 18% 8% 10% 8%;">
+                <table class="table history-table text-center text-white mb-0" style="font-size: 13px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">STT</th>
+                            <th style="width: 15%;">Loại</th>
+                            <th style="width: 45%;">Phần thưởng</th>
+                            <th style="width: 25%;">Ngày</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Hoa</td>
+                            <td>Đã tặng 100 hoa cho Lục Trà Bạc Hà</td>
+                            <td>23/07/2026</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Code</td>
+                            <td>ABACA0145656</td>
+                            <td>23/07/2026</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
