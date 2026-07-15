@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Dự Thi - Hào Khí Du Hiệp</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <!-- Top Bar -->
+        <header class="top-bar position-relative z-3">
+            <!-- Dùng container-fluid và padding % để căn đều chính xác tuyệt đối 2 bên -->
+            <div class="container-fluid h-100 d-flex justify-content-between align-items-center position-relative"
+                style="padding-left: 15vw; padding-right: 15vw;">
+                <!-- Trái: Logo Game (Đã bao gồm chữ bên trong ảnh) -->
+                <div class="d-flex align-items-center z-3">
+                    <img src="src/iconapp.png" alt="Icon Game" style="height: 52px; object-fit: contain;">
+                </div>
+
+                <!-- Phải: Nút Home, FB, Đăng nhập -->
+                <div class="d-flex align-items-center gap-3 z-3">
+                    <a href="#" class="text-white text-decoration-none"><i class="fas fa-home fs-5"></i></a>
+                    <a href="#" class="text-white text-decoration-none"><i class="fab fa-facebook fs-5"></i></a>
+                    <a href="#">
+                        <button class="btn fw-bold text-white"
+                            style="background-color: #0084ff; border-radius: 2px; padding: 4px 16px; border: 1px solid #fff; font-size: 13px; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">ĐĂNG
+                            NHẬP</button>
+                    </a>
+                </div>
+
+                <!-- Logo Hào Khí Du Hiệp (Ở giữa, đè ranh giới 35/65) -->
+                <div class="logo-center-overlap">
+                    <img src="src/Logo-HaoKhiDuHiep.png" alt="Logo Game" class="img-fluid"
+                        style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));">
+                </div>
+            </div>
+        </header>
+
+        <!-- Khoảng trống và Logo MISS MISTER (nhân vật, chữ MISS MISTER) -->
+        <div class="hero-spacer d-flex justify-content-center align-items-center position-relative">
+            <img src="src/text.png" alt="Miss Mister Text" class="img-fluid position-absolute"
+                style="max-width: 900px; z-index: 2; margin-top: 50px;" onerror="this.style.display='none'">
+        </div>
+
+        <!-- Navigation Menu -->
+        <!-- Navigation Menu -->
+        <div class="nav-menu d-flex justify-content-center align-items-center position-relative mx-auto z-2">
+            <img src="src/khungdautrang.png" alt="Background Thanh" class="nav-bg position-absolute w-100">
+            <div
+                class="nav-items d-flex justify-content-center align-items-center position-relative z-1 gap-2 gap-md-4">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalTheLe"><img src="src/thele.png" alt="Thể Lệ"
+                        class="nav-btn"></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalHuongDan"><img src="src/hd.png" alt="Hướng Dẫn"
+                        class="nav-btn"></a>
+                <a href="#" class="position-relative d-inline-block text-decoration-none nav-btn-center">
+                    <!-- Ảnh khiên gốc -->
+                    <img src="src/votengay.png" alt="Shield" style="height: 100%; object-fit: contain;">
+
+                    <!-- Miếng vá gradient để che chữ VOTE NGAY cũ (kéo lên cao hơn) -->
+                    <div class="position-absolute"
+                        style="top: 28%; left: 20%; right: 20%; bottom: 25%; background: linear-gradient(to bottom, #f78665, #e03988); filter: blur(5px); border-radius: 15px; z-index: 1;">
+                    </div>
+
+                    <!-- Chữ THAM GIA NGAY đè lên trên -->
+                    <div class="position-absolute w-100 text-center text-white btn-center-text"
+                        style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Arial Black', Impact, sans-serif; font-weight: 900; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; text-shadow: 1px 2px 3px rgba(0,0,0,0.2);">
+                        THAM GIA<br>NGAY
+                    </div>
+                </a>
+                <a href="#"><img src="src/taigame.png" alt="Tải Game" class="nav-btn"></a>
+                <a href="#"><img src="src/napthe.png" alt="Nạp Thẻ" class="nav-btn"></a>
+            </div>
+        </div>
+
+        <!-- Main Content Container -->
+        <main class="container form-container mt-4 pb-5 position-relative z-1">
+
+            <!-- Tiêu đề Đăng ký dự thi -->
+            <div class="text-center mb-4 mt-2">
+                <img src="src/đkdt.png" alt="Đăng Ký Dự Thi" class="img-fluid" style="max-width: 600px;">
+            </div>
+
+            <div class="row gx-4 gx-lg-5">
+                <!-- Cột trái: Nơi upload ảnh -->
+                <div class="col-md-6 mb-4">
+                    <div class="main-image-upload mb-3 text-center">
+                        <!-- Ảnh to cho đại diện chính -->
+                        <img src="src/themanh.png" class="img-fluid w-100 upload-box" alt="Thêm ảnh dự thi chính">
+                    </div>
+                    <!-- 3 ảnh nhỏ bên dưới -->
+                    <div class="d-flex justify-content-between">
+                        <div class="sub-image-upload"><img src="src/themanhnho.png" class="img-fluid upload-box"
+                                alt="Thêm ảnh 1"></div>
+                        <div class="sub-image-upload"><img src="src/themanhnho.png" class="img-fluid upload-box"
+                                alt="Thêm ảnh 2"></div>
+                        <div class="sub-image-upload"><img src="src/themanhnho.png" class="img-fluid upload-box"
+                                alt="Thêm ảnh 3"></div>
+                    </div>
+                    <div class="text-white mt-2 fst-italic" style="font-size: 13px; opacity: 0.8;">
+                        *Bắt buộc phải đăng ký đủ 4 ảnh dự thi
+                    </div>
+                </div>
+
+                <!-- Cột phải: Form nhập thông tin -->
+                <div class="col-md-6 text-white form-inputs">
+
+                    <!-- Thông tin nhân vật -->
+                    <div class="user-info mb-3">
+                        <div class="mb-2">Nhân vật: <span class="fw-bold text-gold">Lục Trà Bạc Hà</span></div>
+                        <div class="mb-2">Bang hội: <span class="fw-bold text-gold">Lạc Viên</span></div>
+                        <div class="mb-2">Máy chủ: <span class="fw-bold text-gold">S1 - Lý Bạch</span></div>
+                    </div>
+
+                    <!-- Chọn thể loại dự thi (Miss / Mister) -->
+                    <div class="d-flex align-items-center gap-4 mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="radio-custom active" data-target="miss"></div>
+                            <img src="src/thimiss.png" alt="Thi Miss" style="height: 36px;">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="radio-custom" data-target="mister"></div>
+                            <img src="src/thimisster.png" alt="Thi Mister" style="height: 36px;">
+                        </div>
+                        <input type="hidden" name="gender" id="genderInput" value="miss">
+                    </div>
+
+                    <!-- Nhập địa chỉ -->
+                    <div class="mb-3 input-wrap">
+                        <input type="text" class="form-control custom-input long-input"
+                            placeholder="Nhập địa chỉ liên hệ nhận thưởng">
+                    </div>
+
+                    <!-- Điện thoại & Khu vực -->
+                    <div class="row mb-3 gx-2 gx-md-3">
+                        <div class="col-6 input-wrap">
+                            <input type="text" class="form-control custom-input short-input"
+                                placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="col-6 input-wrap">
+                            <input type="text" class="form-control custom-input short-input" placeholder="Chọn khu vực">
+                        </div>
+                    </div>
+
+                    <!-- Nơi nhập CMND/CCCD -->
+                    <div class="mb-3">
+                        <label class="mb-2 d-block">Nhập ảnh CMND/CCCD mặt trước và sau</label>
+                        <div class="d-flex gap-3">
+                            <img src="src/mattruoc.png" alt="Mặt trước" class="upload-btn">
+                            <img src="src/matsau.png" alt="Mặt sau" class="upload-btn">
+                        </div>
+                    </div>
+
+                    <!-- Giới thiệu -->
+                    <div class="mb-3 input-wrap">
+                        <!-- Trong ảnh nó trông giống textarea dài, giả sử dùng background box text bự -->
+                        <textarea class="form-control custom-input big-input" rows="3"
+                            placeholder="Nhập nội dung giới thiệu (không quá 300 kí tự)"></textarea>
+                    </div>
+
+                    <!-- Link Video -->
+                    <div class="mb-4 input-wrap">
+                        <input type="text" class="form-control custom-input long-input" placeholder="Nhập video dự thi">
+                    </div>
+
+                    <!-- Buttons: Đồng ý / Hủy bỏ -->
+                    <div class="d-flex gap-3 gap-md-4 mt-2 mb-4">
+                        <img src="src/buttondongy.png" alt="Đồng Ý" class="action-btn">
+                        <img src="src/buttonhuybo.png" alt="Hủy Bỏ" class="action-btn">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Thể Lệ -->
+    <div class="modal fade" id="modalTheLe" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center position-relative p-0">
+                    <div class="position-relative d-inline-block">
+                        <img src="src/popup_thele.png" alt="Thể Lệ" class="img-fluid">
+                        <button type="button" class="position-absolute" data-bs-dismiss="modal"
+                            style="top: 8%; right: 7%; width: 12%; height: 15%; background: transparent; border: none; cursor: pointer;"
+                            title="Đóng"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hướng Dẫn -->
+    <div class="modal fade" id="modalHuongDan" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center position-relative p-0">
+                    <div class="position-relative d-inline-block">
+                        <img src="src/popup_huongdan.png" alt="Hướng Dẫn" class="img-fluid">
+                        <button type="button" class="position-absolute" data-bs-dismiss="modal"
+                            style="top: 8%; right: 7%; width: 12%; height: 15%; background: transparent; border: none; cursor: pointer;"
+                            title="Đóng"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

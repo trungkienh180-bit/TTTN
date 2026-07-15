@@ -1,0 +1,273 @@
+/* Custom styles cho LDP - Hào Khí Du Hiệp */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b021a;
+    /* Màu nền dự phòng cho BGTRANGVOTING */
+    color: #fff;
+}
+
+.main-wrapper {
+    background-image: url('src/BGTRANGVOTING.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #920ab6;
+    /* Màu tím theo ảnh thiết kế */
+    height: 60px;
+    /* Chiều cao tiêu chuẩn cho Header */
+}
+
+/* Định vị Logo Trung Tâm đè ranh giới chính xác 35% Header / 65% Banner */
+.logo-center-overlap {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /* Neo phần dưới của header */
+    transform: translate(-50%, 65%);
+    /* Đẩy xuống 65% chiều cao của logo, để lại chính xác 35% ở trong header */
+    z-index: 10;
+    width: 240px;
+    /* Kích thước mobile */
+}
+
+@media (min-width: 768px) {
+    .logo-center-overlap {
+        width: 360px;
+    }
+
+    /* Kích thước PC */
+}
+
+@media (min-width: 1200px) {
+    .logo-center-overlap {
+        width: 425px;
+    }
+
+    /* Kích thước màn hình lớn */
+}
+
+/* Khoảng trống để hiện hình ảnh background (nhân vật, rồng, chữ MISS MISTER) */
+.hero-spacer {
+    width: 100%;
+    height: 45vw;
+    /* Co giãn theo chiều ngang màn hình */
+    min-height: 300px;
+    max-height: 600px;
+}
+
+/* Menu Điều Hướng */
+.nav-menu {
+    max-width: 1100px;
+    width: 95%;
+    height: 85px;
+    margin-top: 90px;
+    /* Kéo toàn bộ khung xuống sâu hơn để nhường chỗ cho nút giữa */
+}
+
+.nav-bg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    z-index: 0;
+}
+
+.nav-items {
+    width: 100%;
+}
+
+.nav-btn {
+    height: 38px;
+    margin-top: -50px;
+    /* Trả lại vị trí cũ */
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    filter: brightness(1.2);
+}
+
+.nav-btn-center {
+    height: 135px;
+    /* Giảm 5% */
+    margin-top: -105px;
+    /* Lên nữa */
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 5px 15px rgba(255, 0, 0, 0.4));
+}
+
+.nav-btn-center:hover {
+    transform: scale(1.05) translateY(-2px);
+    filter: brightness(1.2) drop-shadow(0 5px 15px rgba(255, 0, 0, 0.6));
+}
+
+.btn-center-text {
+    font-size: 16px;
+    /* Chữ nhỏ xuống */
+}
+
+@media (min-width: 768px) {
+    .nav-btn {
+        height: 56px;
+        margin-top: -65px;
+    }
+
+    /* Trả lại vị trí cũ */
+    .nav-btn-center {
+        height: 200px;
+        margin-top: -165px;
+    }
+
+    /* Giảm 5% */
+    .nav-menu {
+        height: 110px;
+        margin-top: 120px;
+    }
+
+    .btn-center-text {
+        font-size: 20px;
+    }
+}
+
+/* Form Styles */
+.form-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.text-gold {
+    color: #FFDE5A;
+    text-shadow: 0 0 5px rgba(255, 222, 90, 0.4);
+}
+
+.upload-box {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.upload-box:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.sub-image-upload {
+    width: 31%;
+    /* Để 3 ảnh nhỏ vừa khít với container */
+}
+
+/* Tùy chỉnh input để có hình dáng như trong thiết kế (nền trắng góc chéo) */
+/* Nếu có sẵn ảnh src/box text.png ta sẽ dùng nó làm nền, nếu không thì dùng CSS fallback */
+.input-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.custom-input {
+    background-color: #fff;
+    border: none !important;
+    color: #333;
+    /* Tạo hình chữ nhật góc chéo nhẹ như thiết kế */
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+    border-radius: 0;
+    /* Bỏ bo góc mặc định của bootstrap vì đã dùng clip-path */
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Thiết lập chiều cao và padding cho input */
+.long-input {
+    height: 45px;
+    padding: 0 20px;
+    background: url('src/box text.png') center/100% 100% no-repeat, #fff;
+}
+
+.short-input {
+    height: 45px;
+    padding: 0 20px;
+    background: url('src/boxtextngan.png') center/100% 100% no-repeat, #fff;
+}
+
+.big-input {
+    padding: 15px 20px;
+    background: url('src/boxtext bự.png') center/100% 100% no-repeat, #fff;
+    resize: none;
+}
+
+/* Khi focus vào input */
+.custom-input:focus {
+    background-color: #f8f9fa;
+}
+
+.custom-input::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Radio button tùy chỉnh (hình tròn chọn trắng) */
+.radio-custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 8px;
+    background-color: transparent;
+}
+
+.radio-custom.active::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upload-btn {
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.upload-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.action-btn {
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+@media (min-width: 768px) {
+    .action-btn {
+        height: 55px;
+    }
+}
+}
+
+@media (min-width: 768px) {
+    .action-btn {
+        height: 55px;
+    }
+}
