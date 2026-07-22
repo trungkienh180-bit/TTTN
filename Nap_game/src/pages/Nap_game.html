@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nạp Game - myE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/Nap_game.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <!-- Header -->
+    <header class="header bg-white shadow-sm py-2 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center" style="max-width: 1140px;">
+            <div class="logo">
+                <img src="../assets/images/logo.png" width="112" alt="myE Logo">
+            </div>
+            <nav class="main-nav d-none d-md-flex">
+                <a href="Trang_chu.html" class="nav-link px-3">Trang Chủ</a>
+                <a href="Tro_choi.html" class="nav-link px-3">Trò Chơi</a>
+                <a href="#" class="nav-link px-3 active" onclick="switchView('view-home')">Nạp Game</a>
+                <a href="#" class="nav-link px-3">Tin Tức</a>
+                <a href="#" class="nav-link px-3">Hỗ Trợ</a>
+            </nav>
+            <div class="auth-section">
+                <!-- Nút Đăng nhập -->
+                <button id="loginBtn" class="btn text-white px-4 rounded-pill fw-semibold shadow-sm"
+                    style="background-color: #f97316; font-size: 0.9rem;" onclick="switchView('view-dang-nhap')">Đăng nhập</button>
+
+                <!-- Thông tin User (Ẩn ban đầu) -->
+                <div id="userProfileBlock" class="user-profile position-relative" style="display: none;">
+                    <div class="d-flex align-items-center cursor-pointer">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 42px; height: 42px; background-color: #0ea5e9; color: white;"><span style="font-size: 1.5rem;">😋</span></div>
+                        <div class="d-none d-lg-block me-3 text-start">
+                            <div class="fw-bold fs-7" style="color: #f97316 !important;">myepro01</div>
+                            <div class="fw-semibold" style="font-size: 0.7rem; color: #1e3a8a;">MyE ID: 00123</div>
+                        </div>
+                        <div class="coin-balance d-flex align-items-center ms-2">
+                            <img src="../assets/images/thong_tin_giao_dich/coin_M.png" width="22" height="22" class="me-1" alt="Coin">
+                            <span class="fw-bold fs-7" style="color: #1e3a8a !important;">1000</span>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-menu dropdown-menu-end shadow-sm border mt-3" id="userDropdown"
+                        style="width: 344px; padding: 16px; border-radius: 16px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; background-color: #0ea5e9; color: white;"><span style="font-size: 1.8rem;">😋</span></div>
+                            <div>
+                                <div class="fw-bold text-dark" style="font-size: 0.9rem;">myepro001</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">MyE ID: 00123</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-1 mb-3">
+                            <a class="dropdown-item rounded py-2 d-flex align-items-center" href="#"
+                                onclick="switchView('view-lich-su')" style="font-size: 0.9rem;">
+                                <i class="fa-solid fa-wallet me-3 text-secondary" style="width: 16px;"></i> Quản lý
+                                thanh toán
+                            </a>
+                            <a class="dropdown-item rounded py-2 d-flex align-items-center" href="#"
+                                onclick="switchView('view-tai-khoan')" style="font-size: 0.9rem;">
+                                <i class="fa-solid fa-user me-3 text-secondary" style="width: 16px;"></i> Quản lý tài
+                                khoản
+                            </a>
+                            <a class="dropdown-item rounded py-2 d-flex align-items-center" href="#"
+                                onclick="handleLogout()" style="font-size: 0.9rem;">
+                                <i class="fa-solid fa-right-from-bracket me-3 text-secondary" style="width: 16px;"></i>
+                                Đăng xuất
+                            </a>
+                        </div>
+                        <div class="pt-3 border-top text-center">
+                            <img src="../assets/images/logo.png" height="14" alt="myE Logo">
+                        </div>
+                    </div>
+                </div> <!-- End userProfileBlock -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-4" id="main-container" style="max-width: 1140px;">
+
+        <!-- ==================== VIEW: ĐĂNG NHẬP ==================== -->
+        <div id="view-dang-nhap" style="display: none;">
+            <div class="d-flex justify-content-center align-items-center py-5">
+                <div class="card border-0 shadow-lg" style="border-radius: 20px; max-width: 480px; width: 100%;">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <h3 class="fw-bold mb-4 text-center" style="color: #1e3a8a;">ĐĂNG NHẬP</h3>
+                        
+                        <form onsubmit="event.preventDefault(); handleLogin();">
+                            <!-- Username -->
+                            <div class="input-group mb-4 border rounded-3" style="background-color: #fff; border-color: #e2e8f0; overflow: hidden;">
+                                <span class="input-group-text bg-transparent border-0 pe-1 text-center" style="width: 50px;">
+                                    <i class="fa-solid fa-user" style="color: #1e3a8a; font-size: 1.1rem;"></i>
+                                </span>
+                                <input type="text" class="form-control border-0 shadow-none ps-1 py-3" placeholder="Tên đăng nhập hoặc Email" style="font-size: 0.95rem; color: #64748b;">
+                            </div>
+                            
+                            <!-- Password -->
+                            <div class="input-group mb-2 border rounded-3" style="background-color: #fff; border-color: #e2e8f0; overflow: hidden;">
+                                <span class="input-group-text bg-transparent border-0 pe-1 text-center" style="width: 50px;">
+                                    <i class="fa-solid fa-lock" style="color: #1e3a8a; font-size: 1.1rem;"></i>
+                                </span>
+                                <input type="password" class="form-control border-0 shadow-none ps-1 py-3" placeholder="Mật khẩu" style="font-size: 0.95rem;">
+                                <span class="input-group-text bg-transparent border-0 cursor-pointer pe-3">
+                                    <i class="fa-solid fa-eye-slash text-muted" style="font-size: 1.1rem;"></i>
+                                </span>
+                            </div>
+
+                            <!-- Forgot Password -->
+                            <div class="text-end mb-4 pb-2">
+                                <a href="#" class="text-decoration-none fw-semibold" style="font-size: 0.85rem; color: #3b82f6;">Quên mật khẩu?</a>
+                            </div>
+                            
+                            <!-- Login Button -->
+                            <button type="submit" class="btn w-100 fw-bold py-3 rounded-3 text-white mb-3" style="background-color: #f97316; font-size: 1rem;">ĐĂNG NHẬP</button>
+                            
+                            <!-- Register Button -->
+                            <button type="button" class="btn w-100 fw-bold py-3 rounded-3 text-white mb-4" style="background-color: #0a2558; font-size: 1rem;">ĐĂNG KÝ</button>
+
+                            <!-- Or register with -->
+                            <div class="text-center mb-3 text-muted" style="font-size: 0.9rem;">
+                                hoặc <a href="#" class="text-decoration-none" style="color: #3b82f6;">Đăng ký bằng</a>
+                            </div>
+                            
+                            <!-- Social Icons -->
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <a href="#" onclick="handleLogin('fb')" class="rounded-circle d-flex align-items-center justify-content-center text-decoration-none shadow-sm" style="width: 45px; height: 45px; background-color: #1877f2; color: white;">
+                                    <iconify-icon icon="logos:facebook" class="fs-5"></iconify-icon>
+                                </a>
+                                <a href="#" onclick="handleLogin('gg')" class="rounded-circle d-flex align-items-center justify-content-center text-decoration-none shadow-sm bg-white border" style="width: 45px; height: 45px; color: #db4437;">
+                                    <iconify-icon icon="logos:google-icon" class="fs-5"></iconify-icon>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== VIEW: HOME ==================== -->
+        <div id="view-home">
+            <!-- Banner -->
+            <div class="banner rounded-4 position-relative overflow-hidden mb-5 shadow-sm"
+                style="background-image: url('../assets/images/Nap_Game/Hero-banner.png'); background-size: cover; background-position: center; aspect-ratio: 1517/711; max-width: 1517px; margin: 0 auto;">
+                <div class="position-absolute" style="bottom: 40px; right: 40px;">
+                    <button onclick="switchView('view-lich-su')" class="btn text-white rounded-3 fw-semibold"
+                        style="width: 300px; height: 55px; background-color: rgba(10, 37, 88, 0.5); border: 2px solid #3b82f6; font-size: 1.05rem; backdrop-filter: blur(4px);">Lịch
+                        sử giao dịch</button>
+                </div>
+            </div>
+
+            <!-- Game List Section -->
+            <div class="game-list-section pt-3 mx-auto" style="width: 80%;">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+                    <h4 class="text-primary fw-bold text-uppercase mb-3 mb-md-0">DANH SÁCH GAME</h4>
+                    <div class="search-box position-relative">
+                        <i
+                            class="fa-solid fa-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                        <input type="text" class="form-control rounded-pill ps-5 py-2 bg-light border-0"
+                            placeholder="Hào Khí Chiến Hồn">
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters d-flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-outline-secondary rounded-pill active-filter">TẤT CẢ <span
+                            class="badge ms-1">60</span></button>
+                    <button class="btn btn-outline-secondary rounded-pill">SIMULATION <span
+                            class="badge ms-1">4</span></button>
+                    <button class="btn btn-outline-secondary rounded-pill">ACTION <span
+                            class="badge ms-1">11</span></button>
+                    <button class="btn btn-outline-secondary rounded-pill">RPG <span
+                            class="badge ms-1">37</span></button>
+                    <button class="btn btn-outline-secondary rounded-pill">SHOOTING <span
+                            class="badge ms-1">5</span></button>
+                    <button class="btn btn-outline-secondary rounded-pill">RACING <span
+                            class="badge ms-1">1</span></button>
+                </div>
+
+                <!-- Game Grid -->
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4" id="gameGrid">
+                    <!-- Injected via JS -->
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="d-flex justify-content-center mt-5 mb-2 gap-2">
+                    <span
+                        style="width: 8px; height: 8px; background-color: #f97316; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 8px; height: 8px; background-color: #1e3a8a; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 8px; height: 8px; background-color: #1e3a8a; border-radius: 50%; display: inline-block;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== VIEW: CHỌN GÓI NẠP ==================== -->
+        <div id="view-chon-goi-nap" style="display: none;">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" onclick="switchView('view-home')"
+                            class="text-decoration-none text-primary fw-semibold">Nạp Game</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Liên Quân Mobile</li>
+                </ol>
+            </nav>
+
+            <div class="row g-4">
+                <!-- Left Column: Game Info & User ID -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop"
+                            class="card-img-top" alt="Game Banner" style="height: 150px; object-fit: cover;">
+                        <div class="card-body position-relative text-center pt-0">
+                            <img src="https://ui-avatars.com/api/?name=LQ&background=0ea5e9&color=fff"
+                                class="rounded-3 border border-3 border-white shadow-sm position-relative"
+                                style="width: 70px; margin-top: -35px;" alt="Game Logo">
+                            <h5 class="fw-bold mt-2 mb-1">Liên Quân Mobile</h5>
+                            <p class="text-muted fs-7 mb-0">Nhà phát hành: Garena</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
+                        <h6 class="fw-bold mb-3"><span class="badge bg-primary rounded-circle me-2">1</span> Thông tin
+                            nhân vật</h6>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label text-muted fs-7 fw-semibold">OpenID / UID nhân vật</label>
+                                <input type="text" class="form-control bg-light border-0 py-2"
+                                    placeholder="Nhập ID nhân vật của bạn">
+                            </div>
+                            <button type="button" class="btn btn-outline-primary w-100 rounded-pill fw-semibold">Lấy
+                                thông tin nhân vật</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Packages & Payment -->
+                <div class="col-lg-8">
+                    <!-- Packages -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                        <h6 class="fw-bold mb-4"><span class="badge bg-primary rounded-circle me-2">2</span> Chọn gói
+                            nạp</h6>
+                        <div class="row row-cols-2 row-cols-md-3 g-3" id="packageGrid">
+                            <!-- Packages will be generated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                        <h6 class="fw-bold mb-4"><span class="badge bg-primary rounded-circle me-2">3</span> Phương thức
+                            thanh toán</h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label
+                                    class="payment-option border rounded-3 p-3 d-flex align-items-center cursor-pointer w-100 h-100 position-relative">
+                                    <input type="radio" name="paymentMethod" class="form-check-input mt-0 me-3" checked>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold text-dark">Thanh toán bằng MyE Coin</span>
+                                        <span class="text-muted fs-7">Số dư: <span class="text-warning fw-bold">1000
+                                                Coin</span></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label
+                                    class="payment-option border rounded-3 p-3 d-flex align-items-center cursor-pointer w-100 h-100 position-relative">
+                                    <input type="radio" name="paymentMethod" class="form-check-input mt-0 me-3">
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold text-dark">Ví MoMo / ZaloPay</span>
+                                        <span class="text-muted fs-7">Quét mã QR tiện lợi</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Checkout -->
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-primary text-white">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                            <div>
+                                <p class="mb-1 opacity-75 fs-7">Tổng thanh toán</p>
+                                <h3 class="fw-bold mb-0" id="totalPrice">0 VNĐ</h3>
+                            </div>
+                            <button
+                                class="btn btn-light text-primary rounded-pill px-5 py-3 fw-bold fs-5 shadow-sm hover-scale">Thanh
+                                Toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== VIEW: NẠP MYE COIN ==================== -->
+        <div id="view-nap-mye-coin" style="display: none;">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" onclick="switchView('view-home')"
+                            class="text-decoration-none text-primary fw-semibold">Nạp Game</a></li>
+                    <li class="breadcrumb-item active text-warning fw-semibold" aria-current="page">MyE Coin</li>
+                </ol>
+            </nav>
+
+            <!-- Banner Section -->
+            <div class="position-relative py-4 mb-5" style="z-index: 1;">
+                <!-- Full width background -->
+                <div class="position-absolute"
+                    style="top: 0; left: 50%; transform: translateX(-50%); width: 100vw; height: 100%; background-color: #000D2D; z-index: -1;">
+                </div>
+
+                <!-- Banner Image -->
+                <div class="banner rounded-4 overflow-hidden shadow-sm mx-auto position-relative"
+                    style="background-image: url('../assets/images/Nap_Game/Hero-banner.png'); background-size: cover; background-position: center; aspect-ratio: 1517/711; max-width: 1517px;">
+                    <div class="position-absolute" style="bottom: 40px; right: 40px;">
+                        <button onclick="switchView('view-lich-su')" class="btn text-white rounded-3 fw-semibold"
+                            style="width: 300px; height: 55px; background-color: rgba(10, 37, 88, 0.5); border: 2px solid #3b82f6; font-size: 1.05rem; backdrop-filter: blur(4px);">Lịch
+                            sử giao dịch</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Info Box -->
+            <div class="user-info-box mx-auto bg-white rounded-pill shadow-sm d-flex justify-content-evenly align-items-center mb-5"
+                style="width: 100%; max-width: 1320px; height: 150px; border: 1px solid #e2e8f0; position: relative; z-index: 2; margin-top: -30px;">
+                <div class="text-center">
+                    <div class="text-primary fw-bold mb-2 fs-5" style="color: #1e3a8a !important;">Tài khoản</div>
+                    <div class="text-dark fs-5">myepro123</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-primary fw-bold mb-2 fs-5" style="color: #1e3a8a !important;">MyE ID</div>
+                    <div class="text-dark fs-5">12233548</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-primary fw-bold mb-2 fs-5" style="color: #1e3a8a !important;">Số dư</div>
+                    <div class="text-dark d-flex align-items-center justify-content-center fs-5">
+                        1200 <img src="../assets/images/MYECOIN.png" width="28" class="ms-2" alt="Coin">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chọn hình thức nạp -->
+            <h4 class="text-primary fw-bold text-uppercase mb-4 text-center" style="color: #1e3a8a !important;">CHỌN
+                HÌNH THỨC NẠP</h4>
+            <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border border-warning cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/Thanh_toan_truc_tiep.png" width="80" class="mb-3"
+                            alt="Thanh toán trực tiếp">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">Thanh toán trực tiếp</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/ZaloPay.png" width="80" class="mb-3" alt="ZaloPay">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">ZaloPay</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/MOMO.png" width="80" class="mb-3" alt="Momo">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">Ví Momo</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/ATM.png" width="80" class="mb-3" alt="ATM/Banking">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">ATM/Banking</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/Visa.png" width="80" class="mb-3" alt="Visa/Master">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">Visa/Master</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/Tai_khoan_dinh_danh.png" width="80" class="mb-3"
+                            alt="Tài khoản định danh">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">Tài khoản định danh<br>(Bank VA)</div>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="payment-method-card bg-white rounded-4 shadow-sm border cursor-pointer hover-scale d-flex flex-column align-items-center justify-content-center"
+                        style="height: 209px;">
+                        <img src="../assets/images/Chon_goi_nap/icon_qr.png" width="80" class="mb-3" alt="QR Code">
+                        <div class="fw-semibold" style="font-size: 1.1rem;">QR Code</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chọn gói nạp -->
+            <h4 class="text-primary fw-bold text-uppercase mb-4 text-center" style="color: #1e3a8a !important;">CHỌN GÓI
+                NẠP</h4>
+            <div class="row row-cols-2 row-cols-md-4 g-4 mb-5" id="myeCoinPackageGrid">
+                <!-- Javascript will render the packages here -->
+            </div>
+
+            <!-- Hướng dẫn nạp game -->
+            <div class="instruction-box bg-white rounded-4 shadow-sm p-4 position-relative mt-5 mb-5 mx-auto d-flex flex-column justify-content-center"
+                style="width: 100%; max-width: 1030px; height: 340px; border: 1px solid #3b82f6;">
+                <h4 class="text-primary fw-bold text-uppercase mb-4 text-center" style="color: #1e3a8a !important;">
+                    HƯỚNG DẪN NẠP GAME</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <span
+                                class="badge rounded-circle bg-light text-primary fs-6 me-3 d-flex align-items-center justify-content-center"
+                                style="width: 30px; height: 30px; min-width: 30px;">1</span>
+                            <span class="text-dark">Chọn hình thức nạp phù hợp.</span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <span
+                                class="badge rounded-circle bg-light text-primary fs-6 me-3 d-flex align-items-center justify-content-center"
+                                style="width: 30px; height: 30px; min-width: 30px;">2</span>
+                            <span class="text-dark">Chọn gói MyE Coin muốn nạp.</span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <span
+                                class="badge rounded-circle bg-light text-primary fs-6 me-3 d-flex align-items-center justify-content-center"
+                                style="width: 30px; height: 30px; min-width: 30px;">3</span>
+                            <span class="text-dark">Thanh toán theo hướng dẫn.</span>
+                        </div>
+                        <div class="d-flex mt-4 text-primary">
+                            <i class="fa-solid fa-lock me-2 mt-1"></i>
+                            <span style="font-size: 0.85rem;">Giao dịch an toàn, bảo mật và được xử lý tự động
+                                24/7.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                            <span
+                                class="badge rounded-circle bg-light text-primary fs-6 me-3 d-flex align-items-center justify-content-center"
+                                style="width: 30px; height: 30px; min-width: 30px;">4</span>
+                            <span class="text-dark">MyE Coin sẽ được cộng vào tài khoản ngay sau khi giao dịch thanh
+                                toán thành công.</span>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <span
+                                class="badge rounded-circle bg-light text-primary fs-6 me-3 d-flex align-items-center justify-content-center"
+                                style="width: 30px; height: 30px; min-width: 30px;">5</span>
+                            <div>
+                                <span class="text-dark">Sử dụng MyE Coin:</span>
+                                <ul class="text-muted mt-2 ps-3" style="font-size: 0.85rem;">
+                                    <li>Đăng nhập vào app game.</li>
+                                    <li>Chọn mua gói vật phẩm mong muốn trong game.</li>
+                                    <li>MyE Coin sẽ tự động được trừ ngay khi bấm xác nhận mua trong game.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Features Banner with Anime Girl -->
+            <div class="position-relative mt-5 mb-4 mx-auto" style="max-width: 1000px;">
+                <div class="card border rounded-4 shadow-sm" style="border-color: #e2e8f0 !important; z-index: 1;">
+                    <div class="card-body p-4 pe-5" style="padding-right: 180px !important;">
+                        <div class="row g-4">
+                            <!-- Feature 1 -->
+                            <div class="col-md-4 d-flex align-items-start">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; flex-shrink: 0; background-color: #dbeafe; color: #3b82f6;">
+                                    <i class="fa-solid fa-shield-halved fs-5"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold mb-1" style="font-size: 0.9rem; color: #1e3a8a;">An toàn & Bảo mật</div>
+                                    <div class="text-muted" style="font-size: 0.75rem;">Giao dịch được mã hoá, thông tin của bạn luôn được bảo vệ</div>
+                                </div>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="col-md-4 d-flex align-items-start">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; flex-shrink: 0; background-color: #ffedd5; color: #f97316;">
+                                    <i class="fa-regular fa-clock fs-5"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold mb-1" style="font-size: 0.9rem; color: #f97316;">Nạp tự động 24/7</div>
+                                    <div class="text-muted" style="font-size: 0.75rem;">Thanh toán thành công, MyE Coin sẽ được cộng ngay vào tài khoản.</div>
+                                </div>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="col-md-4 d-flex align-items-start">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; flex-shrink: 0; background-color: #dcfce7; color: #22c55e;">
+                                    <i class="fa-solid fa-headset fs-5"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold mb-1" style="font-size: 0.9rem; color: #22c55e;">Hỗ trợ nhanh chóng</div>
+                                    <div class="text-muted" style="font-size: 0.75rem;">Email: hotro@mye.vn<br>Hotline: 0902 500 198</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anime Girl Image -->
+                <img src="../assets/images/Nap_Game/numye.png" alt="MyE Mascot" class="position-absolute" style="bottom: 0; right: 0; height: 160px; z-index: 2;">
+            </div>
+
+        </div>
+
+        <!-- ==================== VIEW: THÔNG TIN GIAO DỊCH ==================== -->
+        <div id="view-thong-tin-giao-dich" style="display: none;">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" onclick="switchView('view-home')" class="text-decoration-none text-primary fw-semibold">Nạp Game</a></li>
+                    <li class="breadcrumb-item"><a href="#" onclick="switchView('view-nap-mye-coin')" class="text-decoration-none text-primary fw-semibold">MyE Coin</a></li>
+                    <li class="breadcrumb-item active text-warning fw-semibold" aria-current="page">Thông tin giao dịch</li>
+                </ol>
+            </nav>
+
+            <!-- Banner Section with Form -->
+            <div class="position-relative py-4 mb-5" style="z-index: 1;">
+                <!-- Full width background -->
+                <div class="position-absolute" style="top: 0; left: 50%; transform: translateX(-50%); width: 100vw; height: 100%; background-image: url('../assets/images/Nap_Game/bannerdaugame.png'); background-size: cover; background-position: center; z-index: -1;"></div>
+
+                <!-- Banner Container -->
+                <div class="mx-auto position-relative d-flex align-items-center justify-content-end pe-md-5"
+                    style="min-height: 500px; max-width: 1517px;">
+                    
+                    <!-- Checkout Card -->
+                    <div class="card border-0 shadow-lg me-md-5" style="width: 100%; max-width: 550px; border-radius: 12px; z-index: 2;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="fw-bold mb-4" style="color: #1e3a8a;">Nạp MYE Coin</h3>
+                            
+                            <div class="row g-4 mb-4">
+                                <div class="col-6 d-flex align-items-center ps-2 ps-md-4">
+                                    <div class="rounded-circle border d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0; background-color: #fff;">
+                                        <img src="../assets/images/tai_khoan/boxicons_user.png" width="24" alt="User">
+                                    </div>
+                                    <div>
+                                        <div class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">Tài khoản</div>
+                                        <div class="fw-bold text-dark" style="font-size: 1.1rem;">myepro123</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex align-items-center ps-2 ps-md-4">
+                                    <div class="rounded-circle border d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0; background-color: #fff;">
+                                        <img src="../assets/images/tai_khoan/teenyicons_id-outline.png" width="24" alt="ID">
+                                    </div>
+                                    <div>
+                                        <div class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">MYE ID</div>
+                                        <div class="fw-bold text-dark" style="font-size: 1.1rem;">12233548</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-4 mb-4">
+                                <div class="col-6 d-flex align-items-center ps-2 ps-md-4">
+                                    <div class="rounded-circle border d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0; background-color: #fff;">
+                                        <img src="../assets/images/tai_khoan/iconoir_coins.png" width="24" alt="Coins">
+                                    </div>
+                                    <div>
+                                        <div class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">MYE Coin Nhận được</div>
+                                        <div class="fw-bold text-dark" style="font-size: 1.1rem;">500</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex align-items-center ps-2 ps-md-4">
+                                    <div class="rounded-circle border d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; flex-shrink: 0; background-color: #fff;">
+                                        <img src="../assets/images/Chon_goi_nap/MOMO.png" width="30" alt="Momo">
+                                    </div>
+                                    <div>
+                                        <div class="text-muted mb-1" style="font-size: 0.8rem; font-weight: 500;">Phương thức thanh toán</div>
+                                        <div class="fw-bold text-dark" style="font-size: 1.1rem;">Momo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4 ps-2 ps-md-4">
+                                <button class="btn btn-outline-secondary rounded-2 px-3 py-1" style="font-size: 0.8rem; border-color: #e2e8f0; color: #64748b;" onclick="switchView('view-nap-mye-coin')">Đổi hình thức thanh toán khác</button>
+                            </div>
+                            
+                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                <div>
+                                    <div class="fw-bold fs-6 mb-1" style="color: #1e3a8a;">Số tiền thanh toán</div>
+                                    <h3 class="fw-bold mb-0" style="color: #f97316;">500.000 VNĐ</h3>
+                                </div>
+                                <button class="btn text-white rounded-2 px-4 py-3 fw-bold fs-6 shadow-sm" style="background-color: #f97316; width: 180px;">THANH TOÁN</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packages -->
+            <div class="bg-white px-4 py-3 rounded-top-3 border border-bottom-0 mx-auto" style="max-width: fit-content;">
+                <h4 class="text-primary fw-bold text-uppercase mb-0 text-center" style="color: #1e3a8a !important;">CHỌN GÓI NẠP KHÁC</h4>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 g-4 mb-5 border p-4 pt-5 rounded-3 position-relative" id="otherPackageGrid" style="margin-top: -1px;">
+                <!-- Javascript will render packages here -->
+            </div>
+        </div>
+
+        <!-- ==================== VIEW: TÀI KHOẢN ==================== -->
+        <div id="view-tai-khoan" style="display: none; max-width: 1000px; margin: 0 auto;">
+
+            <!-- User Banner New -->
+            <div class="user-banner-new mb-5 shadow-sm">
+                <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end justify-content-between p-4 p-md-5" style="max-width: 1000px; margin: 0 auto; height: 100%;">
+                    <div class="d-flex flex-column flex-md-row align-items-center z-1 text-white text-center text-md-start">
+                        <!-- Big Avatar -->
+                        <div class="me-md-5 mb-4 mb-md-0 position-relative">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center shadow"
+                                style="width: 130px; height: 130px; background-color: #0ea5e9; border: 4px solid rgba(255,255,255,0.2);">
+                                <span style="font-size: 4rem;">😋</span>
+                            </div>
+                        </div>
+                        <!-- User Details -->
+                        <div>
+                            <h2 class="fw-bold mb-3">Nguyễn Văn A</h2>
+                            <div class="d-flex flex-column gap-2 opacity-75 fs-7">
+                                <div><i class="fa-solid fa-user me-2"></i> Tài khoản: fb.112314335</div>
+                                <div><i class="fa-solid fa-lock me-2"></i> MYE ID: 1123123214</div>
+                                <div><i class="fa-regular fa-calendar me-2"></i> Ngày tạo tài khoản: 19/06/2026</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Action Tabs -->
+                    <div class="user-banner-tabs z-1 mt-4 mt-md-0">
+                        <a href="#" class="user-banner-tab active">Tài khoản</a>
+                        <a href="#" class="user-banner-tab">Bảo mật</a>
+                        <a href="#" class="user-banner-tab" onclick="switchView('view-lich-su')">Lịch sử giao dịch</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Level Section -->
+            <div
+                class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start mb-5 px-md-4">
+                <div class="progress-ring me-md-5 mb-4 mb-md-0 shadow-sm">
+                    <div class="progress-ring-text">20%</div>
+                </div>
+                <div class="text-center text-md-start">
+                    <h4 class="fw-bold mb-2">Mức độ bảo mật</h4>
+                    <p class="text-muted mb-0" style="font-size: 0.95rem;">Tài khoản của bạn hiện tại có thể bị đe doạ
+                        bảo mật. Hãy hoàn thiện các thông tin bên dưới.</p>
+                </div>
+            </div>
+
+            <!-- Info Heading -->
+            <div class="mb-4">
+                <h4 class="fw-bold">Thông tin tài khoản</h4>
+                <p class="text-muted" style="font-size: 0.95rem;">Bạn có thể cập nhật Hồ sơ Công khai của mình tại đây
+                    và thông tin sẽ tự động đồng bộ tất cả các tài khoản Game đã được kết nối.</p>
+            </div>
+
+            <!-- Card: Thông tin cá nhân -->
+            <div class="card border border-light shadow-sm rounded-4 overflow-hidden mb-5">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4 px-md-5 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                    <div class="d-flex align-items-center mb-3 mb-md-0">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                            style="width: 50px; height: 50px; background-color: #0ea5e9;">
+                            <span style="font-size: 1.8rem;">😋</span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0 text-primary">Thông tin cá nhân</h5>
+                            <span class="text-danger" style="font-size: 0.8rem;">Chưa hoàn thiện</span>
+                        </div>
+                    </div>
+                    
+                    <div id="profile-edit-btn">
+                        <button class="btn btn-outline-orange rounded-3 fw-bold px-4 py-2" style="font-size: 0.9rem;" onclick="toggleProfileEdit(true)">Chỉnh Sửa</button>
+                    </div>
+                    <div id="profile-action-btns" class="gap-2" style="display: none !important;">
+                        <button class="btn fw-bold px-4 py-2 rounded-3" style="border: 1px solid #1e3a8a; color: #1e3a8a; font-size: 0.85rem;" onclick="toggleProfileEdit(false)">HỦY</button>
+                        <button class="btn text-white fw-bold px-4 py-2 rounded-3" style="background-color: #f97316; font-size: 0.85rem;" onclick="toggleProfileEdit(false)">LƯU</button>
+                    </div>
+                </div>
+                <div class="card-body px-4 px-md-5 pb-5 pt-4">
+                    <div class="d-flex flex-column">
+                        <div class="account-list-item d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="d-flex align-items-center mb-2 mb-md-0">
+                                <div class="account-icon-wrapper"><i class="fa-solid fa-user"></i></div>
+                                <div class="account-label">Họ và tên</div>
+                            </div>
+                            <div class="account-value ms-md-5 editable-field px-2">Nguyễn Văn A</div>
+                        </div>
+                        <div class="account-list-item d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="d-flex align-items-center mb-2 mb-md-0">
+                                <div class="account-icon-wrapper"><i class="fa-solid fa-user-group"></i></div>
+                                <div class="account-label">Giới tính</div>
+                            </div>
+                            <div class="account-value ms-md-5 editable-field px-2">Nam</div>
+                        </div>
+                        <div class="account-list-item d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="d-flex align-items-center mb-2 mb-md-0">
+                                <div class="account-icon-wrapper"><i class="fa-regular fa-calendar"></i></div>
+                                <div class="account-label">Ngày sinh</div>
+                            </div>
+                            <div class="account-value ms-md-5 editable-field px-2">01/01/1999</div>
+                        </div>
+                        <div class="account-list-item d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="d-flex align-items-center mb-2 mb-md-0">
+                                <div class="account-icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="account-label">Địa chỉ</div>
+                            </div>
+                            <div class="account-value ms-md-5 editable-field px-2">TP.Hồ Chí Minh</div>
+                        </div>
+                        <div class="account-list-item d-flex flex-column flex-md-row align-items-md-center">
+                            <div class="d-flex align-items-center mb-2 mb-md-0">
+                                <div class="account-icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="account-label">Email</div>
+                            </div>
+                            <div class="account-value ms-md-5 d-flex align-items-center">
+                                Gameee@gmail.com <i class="fa-solid fa-circle-check text-success ms-2"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="account-list-item d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+                            <div class="d-flex flex-column flex-md-row align-items-md-center w-100">
+                                <div class="d-flex align-items-center mb-2 mb-md-0">
+                                    <div class="account-icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+                                    <div class="account-label">Số điện thoại</div>
+                                </div>
+                                <div class="account-value ms-md-5" style="color: #94a3b8;">Chưa có số điện thoại</div>
+                            </div>
+                            <button
+                                class="btn btn-outline-orange rounded-3 px-4 py-2 mt-3 mt-md-0 text-nowrap fw-semibold"
+                                style="font-size: 0.85rem;">Liên kết xác thực</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Đồng bộ tài khoản -->
+            <div class="card border border-light shadow-sm rounded-4 overflow-hidden mb-5">
+                <div class="card-body p-4 p-md-5">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 50px; height: 50px; background-color: #0ea5e9;">
+                                <span style="font-size: 1.8rem;">😋</span>
+                            </div>
+                            <h5 class="fw-bold mb-0 text-primary">Đồng bộ tài khoản</h5>
+                        </div>
+                        <i class="fa-solid fa-angle-right text-muted fs-5" onclick="collapseSyncCard()" style="cursor: pointer;"></i>
+                    </div>
+
+                                        <div id="sync-case-fb">
+                        <div id="sync-state-1">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            <div
+                                class="sync-box p-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                                <div class="d-flex align-items-center flex-column flex-md-row w-100">
+                                    <!-- Facebook Account -->
+                                    <div class="d-flex align-items-center me-md-4 mb-3 mb-md-0">
+                                        <div class="sync-icon-circle facebook me-3"><iconify-icon icon="logos:facebook" style="font-size: 1.2rem;"></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">Nguyễn Văn A</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">fb.231244</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Arrow -->
+                                    <div class="sync-arrow me-md-4 mb-3 mb-md-0"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></div>
+
+                                    <!-- MyE Account Placeholder -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="sync-icon-circle me-3" style="border-radius: 8px !important; background-color: #e2e8f0; color: #1e3a8a; border: none;"><i class="fa-solid fa-user"></i></div>
+                                        <div class="fw-bold text-dark" style="font-size: 0.85rem;">Chưa có tài khoản MYE
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onclick="document.getElementById('sync-state-1').style.display='none'; document.getElementById('sync-state-2').style.display='block';"
+                                    class="btn text-danger bg-danger bg-opacity-10 rounded-pill px-4 py-2 mt-3 mt-md-0 text-nowrap fw-semibold border-0"
+                                    style="font-size: 0.85rem;">Chưa đồng bộ</button>
+                            </div>
+                        </div>
+
+                        <!-- Sync Form (State 2) -->
+                        <div id="sync-state-2" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            <!-- Current Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:facebook" style="font-size: 1.2rem;"></iconify-icon></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Nguyễn Văn A</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">fb.231244</div>
+                            </div>
+
+                            <!-- Sync Form -->
+                            <div class="mb-2">
+                                <h6 class="fw-bold mb-2">Đồng bộ tài khoản MYE</h6>
+                                <p class="text-muted mb-4" style="font-size: 0.85rem;">Chỉ đồng bộ được tài khoản MYE chưa
+                                    có dữ liệu trong Game. Sau khi đồng bộ, bạn có thể đăng nhập bằng Facebook hoặc tài
+                                    khoản MYE</p>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Tạo tên đăng nhập
+                                        MYE</label>
+                                    <input type="text" class="form-control py-2 rounded-3" placeholder="Tối thiểu 6 kí tự"
+                                        style="border-color: #cbd5e1;">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Tạo mật khẩu</label>
+                                    <input type="password" class="form-control py-2 rounded-3"
+                                        placeholder="Tối thiểu 8 kí tự" style="border-color: #cbd5e1;">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Xác nhận lại mật
+                                        khẩu</label>
+                                    <input type="password" class="form-control py-2 rounded-3"
+                                        placeholder="Tối thiểu 8 kí tự" style="border-color: #cbd5e1;">
+                                </div>
+
+                                <button class="btn w-100 fw-bold py-2 rounded-3 mt-2"
+                                    style="color: #1e3a8a; border: 1px solid #1e3a8a; background-color: transparent;"
+                                    onclick="showSyncSuccess('fb')">Xác
+                                    nhận đồng bộ</button>
+                            </div>
+                        </div>
+
+                        <!-- Synced State (State 3 - Success message) -->
+                        <div id="sync-state-3" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+
+                            <!-- Facebook Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:facebook" style="font-size: 1.2rem;"></iconify-icon></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Nguyễn Văn A</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">fb.231244</div>
+                            </div>
+
+                            <!-- Divider with Badge -->
+                            <div class="position-relative text-center my-4">
+                                <hr class="text-muted" style="border-top: 1px dashed #cbd5e1; margin: 0; opacity: 1;">
+                                <span
+                                    class="position-absolute top-50 start-50 translate-middle px-3 py-1 rounded-pill fw-semibold"
+                                    style="background-color: #dcfce7; color: #166534; font-size: 0.75rem;">Đã đồng bộ</span>
+                            </div>
+
+                            <!-- MYE Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3"
+                                         style="width: 40px; height: 40px; font-size: 1.2rem; background-color: #e2e8f0; color: #1e3a8a; border-radius: 8px !important; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user"></i></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Tài khoản MYE</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">myepro456</div>
+                            </div>
+
+                            <!-- Success Alert Box -->
+                            <div class="rounded-3 p-3 text-center fw-semibold mb-2"
+                                style="background-color: #dcfce7; color: #166534; font-size: 0.85rem;">
+                                <i class="fa-solid fa-circle-check me-2"></i> Tài khoản đã được đồng bộ. Bạn có thể đăng
+                                nhập bằng tài khoản Facebook hoặc tài khoản MYE
+                            </div>
+                        </div>
+                        
+                        <!-- State 4 (Compact layout after success) -->
+                        <div id="sync-state-4" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            
+                            <div class="sync-box p-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                                <div class="d-flex align-items-center flex-column flex-md-row w-100">
+                                    <!-- Facebook Account -->
+                                    <div class="d-flex align-items-center me-md-4 mb-3 mb-md-0">
+                                        <div class="sync-icon-circle me-3" style="background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:facebook" style="font-size: 1.2rem;"></iconify-icon></div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">Nguyễn Văn A</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">fb.231244</div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Arrow -->
+                                    <div class="sync-arrow me-md-4 mb-3 mb-md-0"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+    
+                                    <!-- MyE Account -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="sync-icon-circle me-3" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1;" style="border-radius: 8px !important; background-color: #e2e8f0; color: #1e3a8a; border: none;"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">Tài khoản MYE</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">myepro456</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="px-3 py-1 rounded-pill fw-semibold text-nowrap mt-3 mt-md-0" style="background-color: #dcfce7; color: #166534; font-size: 0.75rem;">Đã đồng bộ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sync-case-gg" style="display: none;">
+                        <div id="sync-gg-state-1">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            <div
+                                class="sync-box p-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                                <div class="d-flex align-items-center flex-column flex-md-row w-100">
+                                    <!-- Google Account -->
+                                    <div class="d-flex align-items-center me-md-4 mb-3 mb-md-0">
+                                        <div class="sync-icon-circle me-3" style="background-color: #db4437; color: white;"><iconify-icon icon="logos:google-icon" style="font-size: 1.2rem;"></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">Trần Văn B</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">gg.231244</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Arrow -->
+                                    <div class="sync-arrow me-md-4 mb-3 mb-md-0"><i
+                                            class="fa-solid fa-arrow-right-arrow-left"></i></div>
+
+                                    <!-- MyE Account Placeholder -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="sync-icon-circle me-3" style="border-radius: 8px !important; background-color: #e2e8f0; color: #1e3a8a; border: none;"><i class="fa-solid fa-user"></i></div>
+                                        <div class="fw-bold text-dark" style="font-size: 0.85rem;">Chưa có tài khoản MYE
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onclick="document.getElementById('sync-gg-state-1').style.display='none'; document.getElementById('sync-gg-state-2').style.display='block';"
+                                    class="btn text-danger bg-danger bg-opacity-10 rounded-pill px-4 py-2 mt-3 mt-md-0 text-nowrap fw-semibold border-0"
+                                    style="font-size: 0.85rem;">Chưa đồng bộ</button>
+                            </div>
+                        </div>
+
+                        <!-- Sync Form (State 2) -->
+                        <div id="sync-gg-state-2" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            <!-- Current Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:google-icon" style="font-size: 1.2rem;"></iconify-icon></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Trần Văn B</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">gg.231244</div>
+                            </div>
+
+                            <!-- Sync Form -->
+                            <div class="mb-2">
+                                <h6 class="fw-bold mb-2">Đồng bộ tài khoản MYE</h6>
+                                <p class="text-muted mb-4" style="font-size: 0.85rem;">Chỉ đồng bộ được tài khoản MYE chưa
+                                    có dữ liệu trong Game. Sau khi đồng bộ, bạn có thể đăng nhập bằng Google hoặc tài
+                                    khoản MYE</p>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Tạo tên đăng nhập
+                                        MYE</label>
+                                    <input type="text" class="form-control py-2 rounded-3" placeholder="Tối thiểu 6 kí tự"
+                                        style="border-color: #cbd5e1;">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Tạo mật khẩu</label>
+                                    <input type="password" class="form-control py-2 rounded-3"
+                                        placeholder="Tối thiểu 8 kí tự" style="border-color: #cbd5e1;">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="font-size: 0.85rem;">Xác nhận lại mật
+                                        khẩu</label>
+                                    <input type="password" class="form-control py-2 rounded-3"
+                                        placeholder="Tối thiểu 8 kí tự" style="border-color: #cbd5e1;">
+                                </div>
+
+                                <button class="btn w-100 fw-bold py-2 rounded-3 mt-2"
+                                    style="color: #1e3a8a; border: 1px solid #1e3a8a; background-color: transparent;"
+                                    onclick="showSyncSuccess('gg')">Xác
+                                    nhận đồng bộ</button>
+                            </div>
+                        </div>
+
+                        <!-- Synced State (State 3 - Success message) -->
+                        <div id="sync-gg-state-3" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+
+                            <!-- Google Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:google-icon" style="font-size: 1.2rem;"></iconify-icon></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Trần Văn B</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">gg.231244</div>
+                            </div>
+
+                            <!-- Divider with Badge -->
+                            <div class="position-relative text-center my-4">
+                                <hr class="text-muted" style="border-top: 1px dashed #cbd5e1; margin: 0; opacity: 1;">
+                                <span
+                                    class="position-absolute top-50 start-50 translate-middle px-3 py-1 rounded-pill fw-semibold"
+                                    style="background-color: #dcfce7; color: #166534; font-size: 0.75rem;">Đã đồng bộ</span>
+                            </div>
+
+                            <!-- MYE Account Box -->
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3"
+                                         style="width: 40px; height: 40px; font-size: 1.2rem; background-color: #e2e8f0; color: #1e3a8a; border-radius: 8px !important; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user"></i></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Tài khoản MYE</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">myepro456</div>
+                            </div>
+
+                            <!-- Success Alert Box -->
+                            <div class="rounded-3 p-3 text-center fw-semibold mb-2"
+                                style="background-color: #dcfce7; color: #166534; font-size: 0.85rem;">
+                                <i class="fa-solid fa-circle-check me-2"></i> Tài khoản đã được đồng bộ. Bạn có thể đăng
+                                nhập bằng tài khoản Google hoặc tài khoản MYE
+                            </div>
+                        </div>
+                        
+                        <!-- State 4 (Compact layout after success) -->
+                        <div id="sync-gg-state-4" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            
+                            <div class="sync-box p-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
+                                <div class="d-flex align-items-center flex-column flex-md-row w-100">
+                                    <!-- Google Account -->
+                                    <div class="d-flex align-items-center me-md-4 mb-3 mb-md-0">
+                                        <div class="sync-icon-circle me-3" style="background-color: white; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center;"><iconify-icon icon="logos:google-icon" style="font-size: 1.2rem;"></iconify-icon></div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.95rem;">Trần Văn B</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">gg.231244</div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Arrow -->
+                                    <div class="sync-arrow me-md-4 mb-3 mb-md-0"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+    
+                                    <!-- MyE Account -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="sync-icon-circle me-3" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1;" style="border-radius: 8px !important; background-color: #e2e8f0; color: #1e3a8a; border: none;"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">Tài khoản MYE</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">myepro456</div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="px-3 py-1 rounded-pill fw-semibold text-nowrap mt-3 mt-md-0" style="background-color: #dcfce7; color: #166534; font-size: 0.75rem;">Đã đồng bộ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sync-case-mye" style="display: none;">
+                        <!-- State 1 (Expanded layout) -->
+                        <div id="sync-mye-state-1" style="display: block;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            
+                            <div class="sync-box p-4 d-flex flex-column flex-md-row align-items-center justify-content-between mb-2">
+                                <div class="d-flex align-items-center flex-column flex-md-row w-100">
+                                    <!-- MYE Account Box -->
+                                    <div class="d-flex align-items-center me-md-4 mb-3 mb-md-0">
+                                        <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; font-size: 1.2rem; background-color: #e2e8f0; color: #1e3a8a; border-radius: 8px !important; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user"></i></div>
+                                        <div>
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">Tài khoản MYE</div>
+                                            <div class="text-muted" style="font-size: 0.8rem;">myepro1123</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Arrow -->
+                                    <div class="sync-arrow me-md-4 mb-3 mb-md-0"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                                    
+                                    <!-- Placeholder Box -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; font-size: 1.2rem; background-color: #e2e8f0; color: #1e3a8a; border-radius: 8px !important; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user"></i></div>
+                                        <div class="text-muted" style="font-size: 0.85rem; max-width: 200px;">Chỉ khả dụng với tài khoản đăng nhập qua Facebook hoặc Google.</div>
+                                    </div>
+                                </div>
+                                <button class="btn text-secondary bg-secondary bg-opacity-25 rounded-pill px-4 py-2 mt-3 mt-md-0 text-nowrap fw-semibold border-0" style="font-size: 0.85rem;" disabled>Không khả dụng</button>
+                            </div>
+                        </div>
+
+                        <!-- State 2 (Collapsed layout) -->
+                        <div id="sync-mye-state-2" style="display: none;">
+                            <div class="fw-bold text-dark mb-3" style="font-size: 0.95rem;">Tài khoản hiện tại</div>
+                            
+                            <div class="sync-box px-4 py-3 d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="sync-icon-circle me-3" style="width: 40px; height: 40px; font-size: 1.2rem; background-color: #e2e8f0; color: #1e3a8a; border-radius: 8px !important; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user"></i></div>
+                                    <div class="fw-bold text-dark" style="font-size: 0.95rem;">Tài khoản MYE</div>
+                                </div>
+                                <div class="text-muted" style="font-size: 0.9rem;">myepro1123</div>
+                            </div>
+                            
+                            <div class="rounded-3 p-3 text-center fw-semibold mb-2" style="background-color: #fef9c3; color: #374151; font-size: 0.85rem; border: 1px solid #fef08a;">
+                                <i class="fa-solid fa-circle-info text-info me-2"></i> Tính năng đồng bộ chỉ khả dụng với tài khoản đăng nhập gốc được tạo qua Facebook hoặc Google
+                            </div>
+                        </div>
+                    </div>
+
+            <!-- Card: Lịch sử hoạt động -->
+            <div class="card border border-light shadow-sm rounded-4 overflow-hidden mb-5" id="activity-history-card">
+                <!-- Header (Clickable) -->
+                <div class="card-body p-4 p-md-5 d-flex align-items-center justify-content-between cursor-pointer hover-scale"
+                     onclick="document.getElementById('activity-history-content').classList.toggle('d-none'); document.getElementById('activity-history-arrow').classList.toggle('fa-angle-down'); document.getElementById('activity-history-arrow').classList.toggle('fa-angle-up');">
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                            style="width: 50px; height: 50px; background-color: #0ea5e9; color: white;">
+                            <span style="font-size: 1.8rem;">😋</span>
+                        </div>
+                        <h5 class="fw-bold mb-0" style="color: #1e3a8a;">Lịch sử hoạt động</h5>
+                    </div>
+                    <div class="rounded-circle border border-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; border-color: #1e3a8a !important;">
+                        <i id="activity-history-arrow" class="fa-solid fa-angle-down fs-6" style="color: #1e3a8a;"></i>
+                    </div>
+                </div>
+
+                <!-- Expanded Content -->
+                <div id="activity-history-content" class="card-body p-4 p-md-5 pt-0 d-none">
+                    <!-- Section Title -->
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-1">Gỡ tất cả các phiên đăng nhập đã lưu</h6>
+                        <div class="text-muted" style="font-size: 0.85rem;">Tăng cường kiểm soát và bảo vệ tài khoản của bạn</div>
+                    </div>
+
+                    <!-- Alert Box -->
+                    <div class="rounded-3 p-4 mb-5 d-flex flex-column flex-md-row justify-content-between align-items-md-center shadow-sm" style="border: 1px solid #e2e8f0;">
+                        <div class="mb-3 mb-md-0 me-md-4">
+                            <div class="fw-bold mb-1 text-dark">Khi thực hiện thao tác này, các thiết bị đang đăng nhập sẽ bị đăng xuất.</div>
+                            <div class="fw-bold mb-2 text-dark">Bạn sẽ cần phải đăng nhập lại.</div>
+                            <div class="text-muted" style="font-size: 0.85rem;">Lưu ý: Để đảm bảo an toàn tài khoản, vui lòng thay đổi mật khẩu trước khi tiến hành gỡ toàn bộ các phiên bản đăng nhập trên mọi thiết bị.</div>
+                        </div>
+                        <button class="btn btn-outline-orange rounded-3 fw-bold px-4 py-2 text-nowrap" style="border-color: #f97316; color: #f97316; font-size: 0.9rem;">Gỡ tất cả</button>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle mb-0">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #f97316;">
+                                    <th scope="col" class="fw-bold text-center py-3 text-dark" style="width: 25%;">Thời gian</th>
+                                    <th scope="col" class="fw-bold text-center py-3 text-dark" style="width: 25%;">Hoạt động</th>
+                                    <th scope="col" class="fw-bold text-center py-3 text-dark" style="width: 25%;">Thiết bị</th>
+                                    <th scope="col" class="fw-bold text-center py-3 text-dark" style="width: 25%;">IP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td class="text-center py-4 fs-7 text-dark"><i class="fa-regular fa-clock me-2"></i>02/06/2026 08:53:18</td>
+                                    <td class="text-center py-4 fs-7 text-dark">Kích hoạt tài khoản</td>
+                                    <td class="py-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="logos:chrome" class="fs-4 me-3"></iconify-icon>
+                                            <div class="text-start fs-7 text-dark">
+                                                <div>Chrome Mobile</div>
+                                                <div class="text-muted" style="font-size: 0.75rem;">Mobile</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center py-4 fs-7 text-dark">210.86.237.19</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center py-4 fs-7 text-dark"><i class="fa-regular fa-clock me-2"></i>02/06/2026 08:52:18</td>
+                                    <td class="text-center py-4 fs-7 text-dark">Cập nhật thông tin tài khoản</td>
+                                    <td class="py-4">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <iconify-icon icon="logos:safari" class="fs-4 me-3"></iconify-icon>
+                                            <div class="text-start fs-7 text-dark">
+                                                <div>Safari</div>
+                                                <div class="text-muted" style="font-size: 0.75rem;">Macbook</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-center py-4 fs-7 text-dark">210.86.237.19</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==================== VIEW: LỊCH SỬ GIAO DỊCH ==================== -->
+        <div id="view-lich-su" style="display: none;">
+            <div class="transaction-section bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                    <h3 class="text-primary fw-bold text-uppercase mb-3 mb-md-0"><i
+                            class="fa-solid fa-file-invoice-dollar me-2"></i>THÔNG TIN GIAO DỊCH</h3>
+                    <div class="search-box position-relative">
+                        <i
+                            class="fa-solid fa-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                        <input type="text" id="transactionSearchInput"
+                            class="form-control rounded-pill ps-5 py-2 bg-light border-0"
+                            placeholder="Tìm mã GD hoặc tên Game...">
+                    </div>
+                </div>
+
+                <div class="table-responsive mt-4">
+                    <table class="table table-hover align-middle" id="transactionTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="text-muted fw-semibold py-3">Mã GD</th>
+                                <th scope="col" class="text-muted fw-semibold py-3">Thời gian</th>
+                                <th scope="col" class="text-muted fw-semibold py-3">Tên Game</th>
+                                <th scope="col" class="text-muted fw-semibold py-3">Gói Nạp</th>
+                                <th scope="col" class="text-muted fw-semibold py-3 text-center">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold text-primary py-3">#GD12345</td>
+                                <td class="fs-7 py-3">21/07/2026 10:30</td>
+                                <td class="fw-semibold py-3">Liên Quân Mobile</td>
+                                <td class="fs-7 py-3">200.000 VNĐ <span class="text-muted">(400 Quân huy)</span></td>
+                                <td class="text-center py-3"><span class="badge bg-success rounded-pill px-3 py-2">Thành
+                                        công</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary py-3">#GD12344</td>
+                                <td class="fs-7 py-3">20/07/2026 15:45</td>
+                                <td class="fw-semibold py-3">PUBG Mobile</td>
+                                <td class="fs-7 py-3">100.000 VNĐ <span class="text-muted">(300 UC)</span></td>
+                                <td class="text-center py-3"><span class="badge bg-success rounded-pill px-3 py-2">Thành
+                                        công</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary py-3">#GD12343</td>
+                                <td class="fs-7 py-3">19/07/2026 08:20</td>
+                                <td class="fw-semibold py-3">Genshin Impact</td>
+                                <td class="fs-7 py-3">500.000 VNĐ <span class="text-muted">(Không Nguyệt Chúc
+                                        Phúc)</span></td>
+                                <td class="text-center py-3"><span
+                                        class="badge bg-warning text-dark rounded-pill px-3 py-2">Đang xử lý</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-primary py-3">#GD12342</td>
+                                <td class="fs-7 py-3">18/07/2026 19:10</td>
+                                <td class="fw-semibold py-3">Tốc Chiến</td>
+                                <td class="fs-7 py-3">50.000 VNĐ <span class="text-muted">(Căn bản)</span></td>
+                                <td class="text-center py-3"><span class="badge bg-danger rounded-pill px-3 py-2">Thất
+                                        bại</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="mt-4 pt-3">
+                    <ul class="pagination justify-content-center mb-0">
+                        <li class="page-item disabled"><a
+                                class="page-link border-0 text-muted bg-light rounded-start-pill px-3" href="#"
+                                tabindex="-1">Trước</a></li>
+                        <li class="page-item active"><a class="page-link border-0 mx-1 rounded" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link border-0 text-dark bg-light mx-1 rounded"
+                                href="#">2</a></li>
+                        <li class="page-item"><a class="page-link border-0 text-dark bg-light mx-1 rounded"
+                                href="#">3</a></li>
+                        <li class="page-item"><a class="page-link border-0 text-dark bg-light rounded-end-pill px-3"
+                                href="#">Sau</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer py-5 mt-auto" style="background-color: #f1f5f9; font-size: 0.75rem; color: #475569;">
+        <div class="container text-center lh-lg" style="max-width: 1140px;">
+            <img src="../assets/images/logo.png" height="54" alt="myE Logo" class="mb-4">
+            <div class="mb-0">Email: hotro@mye.vn</div>
+            <div class="mb-0">Hotline: 0902 500 198</div>
+            <div class="fw-bold text-dark mt-2 mb-0" style="font-size: 0.8rem;">CÔNG TY CỔ PHẦN MYE</div>
+            <div class="mb-0">Chịu trách nhiệm quản lý nội dung: Ông Lâm Trung Hiệp</div>
+            <div class="mb-0">Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh, Việt Nam
+            </div>
+            <div class="mb-0">Giấy phép G1 số: Số 297/GP-BTTTT, Ngày cấp 14/07/2020, Nơi cấp Bộ Thông Tin và Truyền
+                Thông</div>
+            <div class="mt-2 mb-0">Điều khoản dịch vụ | Chính sách bảo mật</div>
+            <div class="mb-0">©Copyright © 2026 MYE. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/Nap_game.js"></script>
+</body>
+
+</html>

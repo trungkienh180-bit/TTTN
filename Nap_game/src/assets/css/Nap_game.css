@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #334155;
+    overflow-x: hidden;
+}
+
+.fs-7 {
+    font-size: 0.85rem;
+}
+
+/* Header */
+.main-nav .nav-link {
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
+}
+
+.main-nav .nav-link:hover {
+    color: #f97316;
+}
+
+.main-nav .nav-link.active {
+    color: #1e3a8a;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f5f9;
+}
+
+/* User Profile Dropdown */
+.user-profile {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
+}
+
+.user-profile::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.user-profile:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.dropdown-menu {
+    margin-top: 0 !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Banner */
+.banner {
+    background: url('../images/Hero-banner.png') center/cover no-repeat;
+    min-height: 400px;
+}
+
+.banner::before {
+    display: none;
+}
+
+/* Filters */
+.filters .btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    padding: 0.4rem 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filters .btn:hover {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #cbd5e1;
+}
+
+.filters .btn.active-filter {
+    border-color: #f97316;
+    color: #f97316;
+    background-color: #ffffff;
+}
+
+.filters .btn .badge {
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 12px;
+}
+
+.filters .btn.active-filter .badge {
+    background-color: #f97316;
+    color: white;
+}
+
+/* Search Box */
+.search-box input {
+    width: 280px;
+    font-size: 0.85rem;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.15);
+    outline: none;
+}
+
+/* Game Card */
+.game-card-container {
+    transition: transform 0.3s ease;
+}
+
+.game-card-container:hover {
+    transform: translateY(-5px);
+}
+
+.game-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 1/1;
+}
+
+.game-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.game-card>img {
+    transition: transform 0.3s ease;
+}
+
+.game-card-container:hover .game-card>img {
+    transform: scale(1.2);
+}
+
+
+.game-title {
+    font-size: 0.85rem;
+    color: #334155;
+    margin-top: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.game-card-special {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Package Option Styling */
+.package-option {
+    border: 2px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.package-option:hover {
+    border-color: #bae6fd;
+    background-color: #f0f9ff;
+    transform: translateY(-2px);
+}
+
+.package-option.selected {
+    border-color: #0ea5e9;
+    background-color: #f0f9ff;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.package-option .check-icon {
+    display: none;
+}
+
+.package-option.selected .check-icon {
+    display: block;
+}
+
+.payment-option {
+    transition: all 0.2s ease;
+    border: 2px solid #e2e8f0 !important;
+}
+
+.payment-option:hover {
+    border-color: #bae6fd !important;
+}
+
+.payment-option:has(input[type="radio"]:checked) {
+    border-color: #0ea5e9 !important;
+    background-color: #f0f9ff;
+}
+
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* User Banner */
+.user-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    min-height: 250px;
+}
+
+.user-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.avatar-container img {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-tabs {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.tab-item {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tab-item:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-item.active {
+    color: white;
+    border-bottom: 3px solid #f97316;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(14, 165, 233, 0.05);
+}
+
+.page-link.active {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+/* MyE Coin View Styles */
+.payment-method-card {
+    transition: all 0.2s ease;
+}
+
+.payment-method-card:hover {
+    border-color: #f97316 !important;
+    box-shadow: 0 0.5rem 1rem rgba(249, 115, 22, 0.15) !important;
+}
+
+.instruction-box {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Profile Sync & Progress Styles */
+.progress-ring {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#f97316 0% 20%, #e2e8f0 20% 100%);
+    position: relative;
+}
+
+.progress-ring::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.progress-ring-text {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f97316;
+}
+
+.btn-outline-orange {
+    color: #f97316;
+    border: 1px solid #f97316;
+    background-color: transparent;
+    transition: all 0.2s;
+}
+
+.btn-outline-orange:hover {
+    color: white;
+    background-color: #f97316;
+}
+
+.account-list-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.25rem 0;
+}
+
+.account-list-item:last-child {
+    border-bottom: none;
+}
+
+.account-icon-wrapper {
+    width: 24px;
+    text-align: center;
+    color: #0ea5e9;
+    margin-right: 1.5rem;
+}
+
+.account-label {
+    width: 140px;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.account-value {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.sync-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.sync-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: #e2e8f0;
+    color: #94a3b8;
+}
+
+.sync-icon-circle.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.sync-arrow {
+    color: #cbd5e1;
+    font-size: 1.25rem;
+}
+
+.user-banner-new {
+    background: #093A88 url('../images/tai_khoan/bannerdautrang.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    border-radius: 0 !important;
+}
+
+.user-banner-new::before {
+    display: none;
+}
+
+.user-banner-tabs {
+    display: flex;
+    gap: 15px;
+}
+
+.user-banner-tab {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.user-banner-tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.user-banner-tab.active {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
