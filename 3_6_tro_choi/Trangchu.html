@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ - MyE Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Trangchu.css?v=27">
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <section class="hero-section">
+    <!-- Lớp nền ảnh rộng toàn màn hình chuẩn Figma (Đổ từ JS) -->
+    <div class="hero-bg-layer"></div>
+
+    <div class="hero-wrapper">
+      <div class="banner-slider">
+        <div class="slider-container"></div>
+        <div class="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+    
+    <section class="game-section">
+      <div class="section-header">
+        <h2 class="section-title">DANH SÁCH GAME</h2>
+        <button id="btn-xem-them" class="btn-see-more">XEM THÊM &rarr;</button>
+      </div>
+
+      <div class="filter-tags">
+        <button class="tag">TẤT CẢ <span class="count">60</span></button>
+        <button class="tag">SIMULATION <span class="count">4</span></button>
+        <button class="tag">ACTION <span class="count">11</span></button>
+        <button class="tag">RPG <span class="count">37</span></button>
+        <button class="tag">SHOOTING <span class="count">5</span></button>
+        <button class="tag">RACING <span class="count">1</span></button>
+      </div>
+
+      <div id="grid-danh-sach-game" class="game-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- Tiêu đề Tiêu Điểm - nằm trên nền trắng -->
+  <div class="feature-title-bar">
+    <h2 class="section-title">TIÊU ĐIỂM</h2>
+  </div>
+
+  <!-- TIÊU ĐIỂM - Banner kéo hết bên trái, nền đen bên phải -->
+  <section class="spotlight-section">
+    <!-- Ảnh banner: từ cạnh trái viewport -->
+    <div class="spotlight-banner">
+      <img src="images/FRAME 3/TIỂU ĐIỂM.png" alt="Tiêu điểm">
+    </div>
+    <!-- Nền đen: right-aligned, hết bên phải -->
+    <div class="spotlight-section-inner">
+      <div class="spotlight-info">
+        <h3>HÀO KHÍ DU HIỆP</h3>
+        <p>HÀO KHÍ DU HIỆP – siêu phẩm kiếm hiệp mobile phong cách võ lâm cổ điển nay đã chính thức ra mắt. Tải và trải nghiệm miễn phí để bước vào hành trình hành tẩu giang hồ ngay hôm nay!</p>
+        <div class="spotlight-btn-row">
+          <button class="btn-spotlight-more">XEM THÊM</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container-news">
+    <section class="news-section">
+      <div class="section-header">
+        <h2 class="section-title">TIN TỨC - SỰ KIỆN</h2>
+        <a href="#" class="btn-see-more-link">XEM THÊM &rarr;</a>
+      </div>
+
+      <!-- Đổ động từ JS -->
+      <div class="news-list"></div>
+    </section>
+  </main>
+
+  <!-- Khu vực banner Đối tác thiết kế chuẩn Figma -->
+  <section class="partner-section">
+    <div class="partner-banner-wrapper">
+      <div class="partner-center-content">
+        <h3 class="partner-title">Trở thành đối tác của chúng tôi?</h3>
+        <p class="partner-subtitle">Tăng trưởng cùng MyE!</p>
+        <a href="#" class="btn-partner-contact">Liên Hệ</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="Trangchu.js"></script>
+</body>
+</html>
