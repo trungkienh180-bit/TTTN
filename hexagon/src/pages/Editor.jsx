@@ -49,8 +49,8 @@ export default function Editor() {
         content: data,
         status: 'Đã xuất bản' // Optionally change status to published
       });
-      // Navigate back to dashboard after publish
-      navigate('/');
+      // Navigate to the published page to view it
+      navigate(newSlug);
     }
   };
 

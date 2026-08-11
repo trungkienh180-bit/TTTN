@@ -177,8 +177,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -229,8 +229,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -269,8 +269,8 @@ export const puckConfig = {
         variant: 'stats',
         padding_y: 20,
         padding_x: 5,
-        background: { 
-          type: 'gradient', 
+        background: {
+          type: 'gradient',
           gradient: 'linear-gradient(180deg, #d4e0ff 0%, #e8d8ff 50%, #f5e0f8 100%)',
           bg_image: '/hoa.webp'
         },
@@ -293,8 +293,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -502,8 +502,8 @@ export const puckConfig = {
           type: 'custom',
           render: ({ name, onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -661,8 +661,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền (Background)',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -733,8 +733,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -821,8 +821,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'color'} 
+              <select
+                value={value?.type || 'color'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -901,8 +901,8 @@ export const puckConfig = {
           type: 'custom', label: 'Nền section',
           render: ({ onChange, value }) => (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <select 
-                value={value?.type || 'image'} 
+              <select
+                value={value?.type || 'image'}
                 onChange={(e) => onChange({ ...value, type: e.target.value })}
                 style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
               >
@@ -954,13 +954,13 @@ export const puckConfig = {
         footerAddress: { type: 'textarea', label: 'Địa chỉ', contentEditable: true },
         footerEmail: { type: 'text', label: 'Email', contentEditable: true },
         footerPhone: { type: 'text', label: 'Hotline', contentEditable: true },
-        footerMainLinks: { 
-          type: 'array', label: 'Liên kết trang', 
-          arrayFields: { label: { type: 'text', label: 'Tên link', contentEditable: true }, url: { type: 'text', label: 'URL' } } 
+        footerMainLinks: {
+          type: 'array', label: 'Liên kết trang',
+          arrayFields: { label: { type: 'text', label: 'Tên link', contentEditable: true }, url: { type: 'text', label: 'URL' } }
         },
-        footerOtherLinks: { 
-          type: 'array', label: 'Khác (Links)', 
-          arrayFields: { label: { type: 'text', label: 'Tên link', contentEditable: true }, url: { type: 'text', label: 'URL' } } 
+        footerOtherLinks: {
+          type: 'array', label: 'Khác (Links)',
+          arrayFields: { label: { type: 'text', label: 'Tên link', contentEditable: true }, url: { type: 'text', label: 'URL' } }
         },
         footerSocialLinks: {
           type: 'array', label: 'Mạng xã hội',

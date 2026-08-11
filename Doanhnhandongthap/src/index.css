@@ -724,7 +724,7 @@ html:has([data-puck-dragging="true"]) .footer-mountain-group {
   object-fit: contain;
   object-position: right bottom;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.35;
   mix-blend-mode: screen;
   z-index: 1;
   mask-image: linear-gradient(135deg, transparent 15%, black 55%);

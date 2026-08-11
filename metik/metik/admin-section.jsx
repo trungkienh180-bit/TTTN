@@ -396,9 +396,9 @@ export const AdminFooter = ({
               )}
             </div>
             <p className="text-gray-900 text-[16px] leading-[1.7] max-w-sm">
-              {introText.split(/(METIK)/i).map((part, i) =>
+              {typeof introText === 'string' ? introText.split(/(METIK)/i).map((part, i) =>
                 part.toUpperCase() === 'METIK' ? <strong key={i} className="font-bold">{part}</strong> : part
-              )}
+              ) : introText}
             </p>
           </div>
 
@@ -443,9 +443,9 @@ export const AdminFooter = ({
       <div className="w-full bg-[#f08121] py-4 relative">
         <div className="max-w-[1100px] mx-auto px-4 flex justify-center items-center">
           <p className="text-white text-[13px] font-medium">
-            {copyrightText.split(/(METIK)/i).map((part, i) =>
+            {typeof copyrightText === 'string' ? copyrightText.split(/(METIK)/i).map((part, i) =>
               part.toUpperCase() === 'METIK' ? <strong key={i} className="font-bold">{part}</strong> : part
-            )}
+            ) : copyrightText}
           </p>
         </div>
       </div>
@@ -500,8 +500,8 @@ export const AdminHeader = ({ logoUrl, navItems = [], facebookUrl, tiktokUrl, li
               key={index}
               href={item.url || '#'}
               className={`text-[15px] font-bold uppercase tracking-wide transition-colors ${isActive
-                  ? 'text-gray-900 border-b-[3px] border-[#f08121] pb-1'
-                  : 'text-gray-500 hover:text-[#f08121]'
+                ? 'text-gray-900 border-b-[3px] border-[#f08121] pb-1'
+                : 'text-gray-500 hover:text-[#f08121]'
                 }`}
             >
               {item.label}
