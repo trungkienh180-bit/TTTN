@@ -1,0 +1,19 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Chạy Backend (Node.js)",
+      "program": "${workspaceRoot}\\src\\index.js",
+      "cwd": "${workspaceRoot}",
+      "console": "internalConsole",
+      "serverReadyAction": {
+        "pattern": "Server is running on port ([0-9]+)",
+        "uriFormat": "http://localhost:%s/api-docs",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

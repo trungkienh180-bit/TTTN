@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model NguoiDung {
+  id        Int      @id @default(autoincrement())
+  ho_ten    String
+  email     String   @unique
+  mat_khau  String
+  vai_tro   VaiTro   @default(KHACH_HANG)
+  avatar    String?
+  so_dien_thoai String?
+  dia_chi   String?  @db.Text
+  gioi_tinh String?
+  ngay_sinh DateTime?
+  gio_hangs GioHang[]
+  don_hangs DonHang[]
+  tao_luc   DateTime @default(now())
+  sua_luc   DateTime @updatedAt
+
+  @@map("nguoi_dung")
+}
+
+enum VaiTro {
+  KHACH_HANG
+  BIEN_TAP_VIEN
+  QUAN_TRI_VIEN
+  QUAN_TRI_CAP_CAO
+}
+
+model DanhMuc {
+  id           Int       @id @default(autoincrement())
+  ten_danh_muc String
+  mo_ta        String?   @db.Text
+  san_phams    SanPham[]
+  tao_luc      DateTime  @default(now())
+  sua_luc      DateTime  @updatedAt
+
+  @@map("danh_muc")
+}
+
+model SanPham {
+  id               Int        @id @default(autoincrement())
+  danh_muc_id      Int
+  ten_san_pham     String
+  hinh_anh         String
+  hinh_anh_1       String?
+  hinh_anh_2       String?
+  hinh_anh_3       String?
+  gia_ban          Decimal    @db.Decimal(15, 2)
+  gia_khuyen_mai   Decimal?   @db.Decimal(15, 2)
+  so_luong         Int        @default(0)
+  mo_ta            String?    @db.Text
+  hang_san_xuat    String?
+  mainboard        String?
+  cpu              String?
+  ram              String?
+  vga              String?
+  o_cung           String?
+  tan_nhiet        String?
+  vo_case          String?
+  nguon            String?
+  he_dieu_hanh     String?
+  la_moi           Boolean    @default(false)
+  la_giam_gia      Boolean    @default(false)
+  la_ban_chay      Boolean    @default(false)
+  
+  danh_muc         DanhMuc    @relation(fields: [danh_muc_id], references: [id])
+  chi_tiet_gio_hang ChiTietGioHang[]
+  chi_tiet_don_hang ChiTietDonHang[]
+  tin_tuc          TinTuc[]
+  
+  tao_luc          DateTime   @default(now())
+  sua_luc          DateTime   @updatedAt
+
+  @@map("san_pham")
+}
+
+model Banner {
+  id        Int      @id @default(autoincrement())
+  tieu_de   String
+  hinh_anh  String
+  lien_ket  String?
+  tao_luc   DateTime @default(now())
+  sua_luc   DateTime @updatedAt
+
+  @@map("banner")
+}
+
+model TinTuc {
+  id          Int      @id @default(autoincrement())
+  tieu_de     String
+  hinh_anh    String
+  noi_dung    String   @db.LongText
+  san_pham_id Int?
+  san_pham    SanPham? @relation(fields: [san_pham_id], references: [id])
+  tao_luc     DateTime @default(now())
+  sua_luc     DateTime @updatedAt
+
+  @@map("tin_tuc")
+}
+
+model GioHang {
+  id              Int        @id @default(autoincrement())
+  nguoi_dung_id   Int
+  nguoi_dung      NguoiDung  @relation(fields: [nguoi_dung_id], references: [id])
+  chi_tiet        ChiTietGioHang[]
+  tao_luc         DateTime   @default(now())
+  sua_luc         DateTime   @updatedAt
+
+  @@map("gio_hang")
+}
+
+model ChiTietGioHang {
+  id            Int      @id @default(autoincrement())
+  gio_hang_id   Int
+  san_pham_id   Int
+  so_luong      Int      @default(1)
+  
+  gio_hang      GioHang  @relation(fields: [gio_hang_id], references: [id], onDelete: Cascade)
+  san_pham      SanPham  @relation(fields: [san_pham_id], references: [id])
+
+  @@map("chi_tiet_gio_hang")
+}
+
+model PhanHoi {
+  id         Int      @id @default(autoincrement())
+  ho_ten     String
+  email      String
+  noi_dung   String   @db.Text
+  trang_thai TrangThaiPhanHoi @default(CHUA_DOC)
+  tao_luc    DateTime @default(now())
+  sua_luc    DateTime @updatedAt
+
+  @@map("phan_hoi")
+}
+
+enum TrangThaiPhanHoi {
+  CHUA_DOC
+  DA_DOC
+  DA_XU_LY
+}
+
+model DonHang {
+  id              Int        @id @default(autoincrement())
+  nguoi_dung_id   Int?
+  ten_khach_hang  String?
+  email_khach_hang String?
+  tong_tien       Decimal    @db.Decimal(15, 2)
+  trang_thai      TrangThaiDonHang @default(CHO_XAC_NHAN)
+  phuong_thuc_tt  PhuongThucThanhToan @default(COD)
+  trang_thai_tt   TrangThaiThanhToan @default(CHUA_THANH_TOAN)
+  ma_giao_dich    String?    // Mã giao dịch từ cổng thanh toán (nếu có)
+  dia_chi_giao    String     @db.Text
+  so_dien_thoai   String
+  ghi_chu         String?    @db.Text
+  
+  nguoi_dung      NguoiDung? @relation(fields: [nguoi_dung_id], references: [id])
+  chi_tiet        ChiTietDonHang[]
+  
+  tao_luc         DateTime   @default(now())
+  sua_luc         DateTime   @updatedAt
+
+  @@map("don_hang")
+}
+
+model ChiTietDonHang {
+  id            Int      @id @default(autoincrement())
+  don_hang_id   Int
+  san_pham_id   Int
+  so_luong      Int
+  gia_mua       Decimal  @db.Decimal(15, 2) // Lưu giá tại thời điểm mua
+  
+  don_hang      DonHang  @relation(fields: [don_hang_id], references: [id], onDelete: Cascade)
+  san_pham      SanPham  @relation(fields: [san_pham_id], references: [id])
+
+  @@map("chi_tiet_don_hang")
+}
+
+enum TrangThaiDonHang {
+  CHO_XAC_NHAN
+  DANG_XU_LY
+  DANG_GIAO_HANG
+  DA_GIAO
+  DA_HUY
+}
+
+enum PhuongThucThanhToan {
+  COD
+  CHUYEN_KHOAN
+  VNPAY
+  SEPAY
+  PAYOS
+  PAYPAL
+}
+
+enum TrangThaiThanhToan {
+  CHUA_THANH_TOAN
+  DA_THANH_TOAN
+  THAT_BAI
+  HOAN_TIEN
+}
+
+model CauHinhGiaoDien {
+  id            Int      @id @default(autoincrement())
+  khoa          String   @unique // Key (e.g. 'logo', 'primaryColor', 'showNewProducts')
+  gia_tri       String   @db.Text // Value
+  mo_ta         String?
+  tao_luc       DateTime @default(now())
+  sua_luc       DateTime @updatedAt
+
+  @@map("cau_hinh_giao_dien")
+}
